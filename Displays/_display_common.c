@@ -53,12 +53,12 @@
 #include "../core.h"
 #include <stdlib.h>
 
-static void	     _displayScrollUp(DISPLAY* display);
+static void	   _displayScrollUp(DISPLAY* display);
 static void 	 _displayNewLine(DISPLAY* display);
 static void 	 _displayReturn(DISPLAY* display);
 
 // Custom chars are 5 pixels across and 8 pixels down
-static uint8_t PROGMEM HorizCustomChar[] = {
+static const uint8_t PROGMEM HorizCustomChar[] = {
 		// Horizontal bar graph
 		0x00, 0x10, 0x10, 0x10, 0x10, 0x10, 0x10, 0x00, // 0. 1/5 full progress block
 		0x00, 0x18, 0x18, 0x18, 0x18, 0x18, 0x18, 0x00, // 1. 2/5 full progress block
@@ -68,7 +68,7 @@ static uint8_t PROGMEM HorizCustomChar[] = {
 };
 
 // Vertical bar graph
-static uint8_t PROGMEM VertCustomChar[] = {
+static const uint8_t PROGMEM VertCustomChar[] = {
 		0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
 		0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E, 0x0E
 };

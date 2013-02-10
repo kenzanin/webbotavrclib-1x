@@ -114,7 +114,7 @@ static void setConnected(__ACTUATOR *actuator, boolean connected){
 }
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_motors = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
+static const __ACTUATOR_DRIVER_CLASS c_motors = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
 
 // Pass the list of servos, the list should be in PROGMEM space to save Flash RAM
 // The specified Timer must implement timer compare interrupts and, if so, it will

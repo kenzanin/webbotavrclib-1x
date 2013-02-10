@@ -71,7 +71,7 @@ static void setSpeed(__ACTUATOR *actuator, DRIVE_SPEED speed){
 
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_sd21_servos = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);
+static const __ACTUATOR_DRIVER_CLASS c_sd21_servos = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);
 
 void sd21Init(SERVO_DRIVER* driver){
 	// Make sure each servo is initialised

@@ -99,9 +99,9 @@
 
 
 // The DDRAM address for the start of each line on a 20 character display
-static uint8_t PROGMEM lineStartAddr20[] = {0x00, 0x40, 0x14, 0x54 };
+static const uint8_t PROGMEM lineStartAddr20[] = {0x00, 0x40, 0x14, 0x54 };
 // The DDRAM address for the start of each line on a 16 character display
-static uint8_t PROGMEM lineStartAddr16[] = {0x00, 0x40, 0x10, 0x50 };
+static const uint8_t PROGMEM lineStartAddr16[] = {0x00, 0x40, 0x10, 0x50 };
 
 
 #define lcd_e_delay()   __asm__ __volatile__( "rjmp 1f\n 1:" );
@@ -417,4 +417,4 @@ static void vgraph(DISPLAY* display,DISPLAY_COLUMN x,DISPLAY_COLUMN y, uint16_t 
 }
 
 
-DISPLAY_CLASS PROGMEM c_HD44780 = MAKE_DISPLAY_CLASS(&init,&cls,&home,&gotoXY, null, null, null, null, null, &sendRawByte,&hgraph,&vgraph,&customChar);
+DISPLAY_CLASS const PROGMEM c_HD44780 = MAKE_DISPLAY_CLASS(&init,&cls,&home,&gotoXY, null, null, null, null, null, &sendRawByte,&hgraph,&vgraph,&customChar);

@@ -53,7 +53,7 @@
 #include "../_temperature_common.h"
 #include "../../../a2d.h"
 
-extern TEMPERATURE_CLASS c_Phidget_Temperature;
+extern const TEMPERATURE_CLASS c_Phidget_Temperature;
 
 typedef struct s_Phidget_Temperature{
 	TEMPERATURE 	temperature;

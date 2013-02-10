@@ -404,7 +404,7 @@ static void	endXmitMode(UART* _uart){
 
 
 // Create a class with the method overrides for this type of UART
-UART_CLASS c_sw_uart = MAKE_UART_CLASS( \
+UART_CLASS const c_sw_uart = MAKE_UART_CLASS( \
 		&__uartswSetBaudRate, \
 		&__uartswStartXmit, \
 		&__uartswInit, \

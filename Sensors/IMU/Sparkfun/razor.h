@@ -37,7 +37,7 @@
 #include "../../../_uart_common.h"
 #include "../_imu_common.h"
 
-extern IMU_CLASS c_razor;
+extern const IMU_CLASS c_razor;
 
 typedef struct s_RAZOR{
 	IMU			imu;							// Include fields from parent type

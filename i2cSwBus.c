@@ -186,5 +186,5 @@ static void init(I2C_ABSTRACT_BUS* bus){
 
 
 // Expose this implementation to the linker
-I2C_CLASS c_sw_i2c = MAKE_I2C_CLASS(&init, &start,&stop, &getByte, &putByte, null);
+I2C_CLASS const c_sw_i2c = MAKE_I2C_CLASS(&init, &start,&stop, &getByte, &putByte, null);
 

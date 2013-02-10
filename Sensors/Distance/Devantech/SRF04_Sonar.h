@@ -38,7 +38,7 @@
 #include "../_distance_common.h"
 #include "../../../iopin.h"
 
-extern DISTANCE_CLASS c_Devantech_SRF04;
+extern const DISTANCE_CLASS c_Devantech_SRF04;
 
 typedef struct s_Devantech_SRF04{
 	DISTANCE 		distance;

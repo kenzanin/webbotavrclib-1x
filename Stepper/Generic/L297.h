@@ -40,7 +40,7 @@
 #include "../../timer.h"
 #include "../../iopin.h"
 
-extern STEPPER_MOTOR_IMPL c_l297;
+extern const STEPPER_MOTOR_IMPL c_l297;
 
 // An L297 controls an individual motor
 typedef struct s_l297 {

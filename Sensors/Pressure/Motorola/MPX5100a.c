@@ -86,7 +86,7 @@ static void __mpx5100a_read(SENSOR* sensor){
 }
 
 // 20ms startup time
-PRESSURE_CLASS c_MPX5100A = MAKE_PRESSURE_CLASS(&__mpx5100a_init,&__mpx5100a_read,20,0);
+PRESSURE_CLASS const c_MPX5100A = MAKE_PRESSURE_CLASS(&__mpx5100a_init,&__mpx5100a_read,20,0);
 
 
 

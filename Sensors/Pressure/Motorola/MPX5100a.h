@@ -61,7 +61,7 @@
 #include "../../../a2d.h"
 
 // The class used to read a raw value
-extern PRESSURE_CLASS c_MPX5100A;
+extern const PRESSURE_CLASS c_MPX5100A;
 
 typedef struct s_MPX5100A{
 	PRESSURE	 pressure;

@@ -86,5 +86,5 @@ static void __quadrature_init(SENSOR* sensor){
 
 
 
-ENCODER_CLASS c_quadraturex2 = MAKE_ENCODER_CLASS(&__quadrature_init,&__encoder_read,0,0);
+ENCODER_CLASS const c_quadraturex2 = MAKE_ENCODER_CLASS(&__quadrature_init,&__encoder_read,0,0);
 

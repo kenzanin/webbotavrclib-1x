@@ -47,4 +47,4 @@ static void __Phidget_Temperature_read(SENSOR* sensor){
 	device->temperature.celsius = adc;
 }
 
-TEMPERATURE_CLASS c_Phidget_Temperature = MAKE_TEMPERATURE_CLASS(null,&__Phidget_Temperature_read, 0 ,0 );
+TEMPERATURE_CLASS const c_Phidget_Temperature = MAKE_TEMPERATURE_CLASS(null,&__Phidget_Temperature_read, 0 ,0 );

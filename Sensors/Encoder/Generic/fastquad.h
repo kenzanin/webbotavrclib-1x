@@ -46,14 +46,14 @@
 
 #include "../_encoder_common.h"
 
-extern ENCODER_CLASS c_fastquad_INT0;
-extern ENCODER_CLASS c_fastquad_INT1;
-extern ENCODER_CLASS c_fastquad_INT2;
-extern ENCODER_CLASS c_fastquad_INT3;
-extern ENCODER_CLASS c_fastquad_INT4;
-extern ENCODER_CLASS c_fastquad_INT5;
-extern ENCODER_CLASS c_fastquad_INT6;
-extern ENCODER_CLASS c_fastquad_INT7;
+extern const ENCODER_CLASS c_fastquad_INT0;
+extern const ENCODER_CLASS c_fastquad_INT1;
+extern const ENCODER_CLASS c_fastquad_INT2;
+extern const ENCODER_CLASS c_fastquad_INT3;
+extern const ENCODER_CLASS c_fastquad_INT4;
+extern const ENCODER_CLASS c_fastquad_INT5;
+extern const ENCODER_CLASS c_fastquad_INT6;
+extern const ENCODER_CLASS c_fastquad_INT7;
 
 typedef struct s_fastquad{
 	ENCODER		 encoder;
@@ -64,69 +64,69 @@ typedef struct s_fastquad{
 	MAKE_ENCODER_SENSOR(c_fastquad_##channelA, inverted,numStripes,interpolate), \
 	channelB}
 
-extern ENCODER_CLASS c_fastquadx2_INT0_INT1;
-extern ENCODER_CLASS c_fastquadx2_INT0_INT2;
-extern ENCODER_CLASS c_fastquadx2_INT0_INT3;
-extern ENCODER_CLASS c_fastquadx2_INT0_INT4;
-extern ENCODER_CLASS c_fastquadx2_INT0_INT5;
-extern ENCODER_CLASS c_fastquadx2_INT0_INT6;
-extern ENCODER_CLASS c_fastquadx2_INT0_INT7;
+extern const ENCODER_CLASS c_fastquadx2_INT0_INT1;
+extern const ENCODER_CLASS c_fastquadx2_INT0_INT2;
+extern const ENCODER_CLASS c_fastquadx2_INT0_INT3;
+extern const ENCODER_CLASS c_fastquadx2_INT0_INT4;
+extern const ENCODER_CLASS c_fastquadx2_INT0_INT5;
+extern const ENCODER_CLASS c_fastquadx2_INT0_INT6;
+extern const ENCODER_CLASS c_fastquadx2_INT0_INT7;
 
-extern ENCODER_CLASS c_fastquadx2_INT1_INT0;
-extern ENCODER_CLASS c_fastquadx2_INT1_INT2;
-extern ENCODER_CLASS c_fastquadx2_INT1_INT3;
-extern ENCODER_CLASS c_fastquadx2_INT1_INT4;
-extern ENCODER_CLASS c_fastquadx2_INT1_INT5;
-extern ENCODER_CLASS c_fastquadx2_INT1_INT6;
-extern ENCODER_CLASS c_fastquadx2_INT1_INT7;
+extern const ENCODER_CLASS c_fastquadx2_INT1_INT0;
+extern const ENCODER_CLASS c_fastquadx2_INT1_INT2;
+extern const ENCODER_CLASS c_fastquadx2_INT1_INT3;
+extern const ENCODER_CLASS c_fastquadx2_INT1_INT4;
+extern const ENCODER_CLASS c_fastquadx2_INT1_INT5;
+extern const ENCODER_CLASS c_fastquadx2_INT1_INT6;
+extern const ENCODER_CLASS c_fastquadx2_INT1_INT7;
 
-extern ENCODER_CLASS c_fastquadx2_INT2_INT0;
-extern ENCODER_CLASS c_fastquadx2_INT2_INT1;
-extern ENCODER_CLASS c_fastquadx2_INT2_INT3;
-extern ENCODER_CLASS c_fastquadx2_INT2_INT4;
-extern ENCODER_CLASS c_fastquadx2_INT2_INT5;
-extern ENCODER_CLASS c_fastquadx2_INT2_INT6;
-extern ENCODER_CLASS c_fastquadx2_INT2_INT7;
+extern const ENCODER_CLASS c_fastquadx2_INT2_INT0;
+extern const ENCODER_CLASS c_fastquadx2_INT2_INT1;
+extern const ENCODER_CLASS c_fastquadx2_INT2_INT3;
+extern const ENCODER_CLASS c_fastquadx2_INT2_INT4;
+extern const ENCODER_CLASS c_fastquadx2_INT2_INT5;
+extern const ENCODER_CLASS c_fastquadx2_INT2_INT6;
+extern const ENCODER_CLASS c_fastquadx2_INT2_INT7;
 
-extern ENCODER_CLASS c_fastquadx2_INT3_INT0;
-extern ENCODER_CLASS c_fastquadx2_INT3_INT1;
-extern ENCODER_CLASS c_fastquadx2_INT3_INT2;
-extern ENCODER_CLASS c_fastquadx2_INT3_INT4;
-extern ENCODER_CLASS c_fastquadx2_INT3_INT5;
-extern ENCODER_CLASS c_fastquadx2_INT3_INT6;
-extern ENCODER_CLASS c_fastquadx2_INT3_INT7;
+extern const ENCODER_CLASS c_fastquadx2_INT3_INT0;
+extern const ENCODER_CLASS c_fastquadx2_INT3_INT1;
+extern const ENCODER_CLASS c_fastquadx2_INT3_INT2;
+extern const ENCODER_CLASS c_fastquadx2_INT3_INT4;
+extern const ENCODER_CLASS c_fastquadx2_INT3_INT5;
+extern const ENCODER_CLASS c_fastquadx2_INT3_INT6;
+extern const ENCODER_CLASS c_fastquadx2_INT3_INT7;
 
-extern ENCODER_CLASS c_fastquadx2_INT4_INT0;
-extern ENCODER_CLASS c_fastquadx2_INT4_INT1;
-extern ENCODER_CLASS c_fastquadx2_INT4_INT2;
-extern ENCODER_CLASS c_fastquadx2_INT4_INT3;
-extern ENCODER_CLASS c_fastquadx2_INT4_INT5;
-extern ENCODER_CLASS c_fastquadx2_INT4_INT6;
-extern ENCODER_CLASS c_fastquadx2_INT4_INT7;
+extern const ENCODER_CLASS c_fastquadx2_INT4_INT0;
+extern const ENCODER_CLASS c_fastquadx2_INT4_INT1;
+extern const ENCODER_CLASS c_fastquadx2_INT4_INT2;
+extern const ENCODER_CLASS c_fastquadx2_INT4_INT3;
+extern const ENCODER_CLASS c_fastquadx2_INT4_INT5;
+extern const ENCODER_CLASS c_fastquadx2_INT4_INT6;
+extern const ENCODER_CLASS c_fastquadx2_INT4_INT7;
 
-extern ENCODER_CLASS c_fastquadx2_INT5_INT0;
-extern ENCODER_CLASS c_fastquadx2_INT5_INT1;
-extern ENCODER_CLASS c_fastquadx2_INT5_INT2;
-extern ENCODER_CLASS c_fastquadx2_INT5_INT3;
-extern ENCODER_CLASS c_fastquadx2_INT5_INT4;
-extern ENCODER_CLASS c_fastquadx2_INT5_INT6;
-extern ENCODER_CLASS c_fastquadx2_INT5_INT7;
+extern const ENCODER_CLASS c_fastquadx2_INT5_INT0;
+extern const ENCODER_CLASS c_fastquadx2_INT5_INT1;
+extern const ENCODER_CLASS c_fastquadx2_INT5_INT2;
+extern const ENCODER_CLASS c_fastquadx2_INT5_INT3;
+extern const ENCODER_CLASS c_fastquadx2_INT5_INT4;
+extern const ENCODER_CLASS c_fastquadx2_INT5_INT6;
+extern const ENCODER_CLASS c_fastquadx2_INT5_INT7;
 
-extern ENCODER_CLASS c_fastquadx2_INT6_INT0;
-extern ENCODER_CLASS c_fastquadx2_INT6_INT1;
-extern ENCODER_CLASS c_fastquadx2_INT6_INT2;
-extern ENCODER_CLASS c_fastquadx2_INT6_INT3;
-extern ENCODER_CLASS c_fastquadx2_INT6_INT4;
-extern ENCODER_CLASS c_fastquadx2_INT6_INT5;
-extern ENCODER_CLASS c_fastquadx2_INT6_INT7;
+extern const ENCODER_CLASS c_fastquadx2_INT6_INT0;
+extern const ENCODER_CLASS c_fastquadx2_INT6_INT1;
+extern const ENCODER_CLASS c_fastquadx2_INT6_INT2;
+extern const ENCODER_CLASS c_fastquadx2_INT6_INT3;
+extern const ENCODER_CLASS c_fastquadx2_INT6_INT4;
+extern const ENCODER_CLASS c_fastquadx2_INT6_INT5;
+extern const ENCODER_CLASS c_fastquadx2_INT6_INT7;
 
-extern ENCODER_CLASS c_fastquadx2_INT7_INT0;
-extern ENCODER_CLASS c_fastquadx2_INT7_INT1;
-extern ENCODER_CLASS c_fastquadx2_INT7_INT2;
-extern ENCODER_CLASS c_fastquadx2_INT7_INT3;
-extern ENCODER_CLASS c_fastquadx2_INT7_INT4;
-extern ENCODER_CLASS c_fastquadx2_INT7_INT5;
-extern ENCODER_CLASS c_fastquadx2_INT7_INT6;
+extern const ENCODER_CLASS c_fastquadx2_INT7_INT0;
+extern const ENCODER_CLASS c_fastquadx2_INT7_INT1;
+extern const ENCODER_CLASS c_fastquadx2_INT7_INT2;
+extern const ENCODER_CLASS c_fastquadx2_INT7_INT3;
+extern const ENCODER_CLASS c_fastquadx2_INT7_INT4;
+extern const ENCODER_CLASS c_fastquadx2_INT7_INT5;
+extern const ENCODER_CLASS c_fastquadx2_INT7_INT6;
 
 typedef struct s_fastquadx2{
 	ENCODER		 encoder;

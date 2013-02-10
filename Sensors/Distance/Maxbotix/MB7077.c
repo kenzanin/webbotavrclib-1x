@@ -46,5 +46,5 @@ static void _read(SENSOR* sensor){
 	sonar->distance.cm = adc;
 }
 
-DISTANCE_CLASS c_Maxbotix_MB7077 = MAKE_DISTANCE_CLASS(null,&_read,0,0);
+DISTANCE_CLASS const c_Maxbotix_MB7077 = MAKE_DISTANCE_CLASS(null,&_read,0,0);
 

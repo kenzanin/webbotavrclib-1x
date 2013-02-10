@@ -113,7 +113,7 @@ static void setSpeed(__ACTUATOR *actuator, DRIVE_SPEED speed){
 }
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_Sabertooth = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
+static const __ACTUATOR_DRIVER_CLASS c_Sabertooth = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
 
 
 void sabertoothInit(SABERTOOTH_DRIVER* driver){

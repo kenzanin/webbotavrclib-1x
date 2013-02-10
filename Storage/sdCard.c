@@ -439,7 +439,7 @@ static uint32_t disk_total_sectors(void* device){
 }
 
 // Create a class with the method overrides for this type of storage class
-static STORAGE_CLASS PROGMEM c_sdCard_disk = MAKE_STORAGE_CLASS( \
+static const STORAGE_CLASS PROGMEM c_sdCard_disk = MAKE_STORAGE_CLASS( \
 		&disk_read, \
 		&disk_write, \
 		&disk_total_sectors);

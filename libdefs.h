@@ -70,24 +70,24 @@
 #define LIBDEFS_H_
 
 #if defined(_WINDOWS_)
-	#define PROGMEM
+	#include <avr/pgmspace.h>
+//	#define PROGMEM
 	#include <memory.h>
-	#define pgm_read_byte(addr) *addr
-	#define pgm_read_word(addr) *addr
-	#define memcpy_P(a,b,c) memcpy(a,b,c);
-	#define prog_char
+//	#define pgm_read_byte(addr) *addr
+//	#define pgm_read_word(addr) *addr
+//	#define memcpy_P(a,b,c) memcpy(a,b,c);
+//	#define prog_char
 	typedef unsigned long uint32_t;
 	typedef unsigned int uint16_t;
 	typedef unsigned char uint8_t;
 	typedef signed char int8_t;
 	typedef int int16_t;
-	#define PSTR(s) s
+//	#define PSTR(s) s
 	#define FALSE 0
 	#define TRUE  1
-	#define __inline__
+//	#define __inline__
 	#define  null ((void*)0)
 	#define MAKE_WRITER(name) uint8_t name(uint8_t byte)
-
 #else
 	// include common WinAVR stuff
 	#include <inttypes.h>
@@ -97,8 +97,10 @@
 	#include <avr/interrupt.h>
 #endif
 
+typedef char PROGMEM prog_char;
+
 // create a type for boolean
-typedef int8_t boolean;
+typedef _Bool boolean;
 
 // create a type to store timer us ticks
 // maximum is 0xFFFFFFFF or 4294967295us = 4294 seconds or 71 minutes

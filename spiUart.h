@@ -49,7 +49,7 @@
 #include "uart.h"
 
 // Class definition for a uart SPI
-extern SPI_CLASS c_uart_spi;
+extern const SPI_CLASS c_uart_spi;
 
 
 // Define the data stored for a uart spi interface

@@ -35,7 +35,7 @@
 #include "../_display_common.h"
 #include "../../i2cBus.h"
 
-extern DISPLAY_CLASS c_lcd03_i2c;
+extern const DISPLAY_CLASS c_lcd03_i2c;
 
 typedef struct s_lcd03_i2c{
 	DISPLAY _display_;

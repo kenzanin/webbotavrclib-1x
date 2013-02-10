@@ -51,7 +51,7 @@ static void __spiUARTSetDataOrder(SPI_ABSTRACT_BUS* spi,SPI_DATA_ORDER order);
 static void __spiUARTSetMode(SPI_ABSTRACT_BUS* spi,SPI_MODE mode);
 static uint8_t __spiUARTSendByte(SPI_ABSTRACT_BUS* spi, uint8_t data);
 
-SPI_CLASS PROGMEM c_uart_spi = MAKE_SPI_CLASS(&__spiUARTInit, &__spiUARTOff,&__spiUARTSetClock,&__spiUARTSetDataOrder, &__spiUARTSetMode,&__spiUARTSendByte,null,null,null);
+SPI_CLASS const PROGMEM c_uart_spi = MAKE_SPI_CLASS(&__spiUARTInit, &__spiUARTOff,&__spiUARTSetClock,&__spiUARTSetDataOrder, &__spiUARTSetMode,&__spiUARTSendByte,null,null,null);
 
 
 // compatibility for the mega161

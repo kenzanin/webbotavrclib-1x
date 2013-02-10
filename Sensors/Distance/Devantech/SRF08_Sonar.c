@@ -79,5 +79,5 @@ static void __srf08_read(SENSOR* sensor){
 }
 
 // Requires a 70ms delay between readings
-DISTANCE_CLASS c_Devantech_SRF08 = MAKE_DISTANCE_CLASS(null,&__srf08_read,0,70);
+DISTANCE_CLASS const c_Devantech_SRF08 = MAKE_DISTANCE_CLASS(null,&__srf08_read,0,70);
 

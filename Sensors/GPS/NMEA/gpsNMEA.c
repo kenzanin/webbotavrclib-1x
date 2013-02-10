@@ -504,4 +504,4 @@ static void read(SENSOR* sensor){
 }
 
 // No point reading more often then every 500ms
-GPS_CLASS PROGMEM c_gps_nmea = MAKE_GPS_CLASS(&init,&read,0,500);
+GPS_CLASS const PROGMEM c_gps_nmea = MAKE_GPS_CLASS(&init,&read,0,500);

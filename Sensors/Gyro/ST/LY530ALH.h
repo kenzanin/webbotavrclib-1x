@@ -77,7 +77,7 @@
 #include "../../../a2d.h"
 
 // The class used to read a raw value
-extern GYRO_CLASS c_LY530ALH;
+extern const GYRO_CLASS c_LY530ALH;
 
 typedef struct s_LY530ALH{
 	GYRO 		 gyro;

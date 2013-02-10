@@ -38,7 +38,7 @@
 #include "../_stepper_common.h"
 #include "../../iopin.h"
 
-extern STEPPER_MOTOR_IMPL c_bipolar;
+extern const STEPPER_MOTOR_IMPL c_bipolar;
 
 // The increment in the phase table
 enum {

@@ -102,7 +102,7 @@ static void setConnected(__ACTUATOR *actuator, boolean connected){
 }
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_motors = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
+static const __ACTUATOR_DRIVER_CLASS c_motors = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
 
 // Return true if valid, false if there is an error
 static boolean initPWM(const IOPin* pin, uint32_t deciHertz){

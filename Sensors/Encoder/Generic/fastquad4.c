@@ -55,7 +55,7 @@
 static void _init(SENSOR* sensor){}
 #endif
 
-ENCODER_CLASS c_fastquad_INT4 = MAKE_ENCODER_CLASS(&_init,&__encoder_read,0,0);
+ENCODER_CLASS const c_fastquad_INT4 = MAKE_ENCODER_CLASS(&_init,&__encoder_read,0,0);
 
 
 

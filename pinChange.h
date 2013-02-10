@@ -62,7 +62,7 @@ void pin_change_dettach(const IOPin* io);
 
 #if defined(BUILDING_LIBRARY)
 // we are building the lib
-extern const IOPin* PROGMEM PCINT_PINS[];
+extern const IOPin* const PROGMEM PCINT_PINS[];
 extern const uint8_t NUM_PCINT_PINS;
 extern PIN_CHANGE pcCallbacks[];
 #else

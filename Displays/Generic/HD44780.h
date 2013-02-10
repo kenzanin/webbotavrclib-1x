@@ -47,7 +47,7 @@
 #include "../_display_common.h"
 
 
-extern DISPLAY_CLASS c_HD44780;
+extern const DISPLAY_CLASS c_HD44780;
 
 
 typedef struct s_hd44780{

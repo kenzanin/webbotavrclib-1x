@@ -31,7 +31,7 @@
 
 #include "Bipolar.h"
 
-static uint8_t PROGMEM phases[] = {
+static const uint8_t PROGMEM phases[] = {
 		0b11000001,	// Coil 1A
 		0b00011100, // Coil 1B
 		0b00000111, // Coil 1C
@@ -85,6 +85,6 @@ static void	init(STEPPER_MOTOR* stepper){
 
 }
 
-STEPPER_MOTOR_IMPL c_bipolar = MAKE_STEPPER_MOTOR_IMPL(&init,null,&setConnected,&step);
+STEPPER_MOTOR_IMPL const c_bipolar = MAKE_STEPPER_MOTOR_IMPL(&init,null,&setConnected,&step);
 
 

@@ -45,7 +45,7 @@
 #include "../../../i2cBus.h"
 
 // The class used to read a raw value
-extern ACCELEROMETER_CLASS c_ADXL345;
+extern const ACCELEROMETER_CLASS c_ADXL345;
 
 typedef struct s_ADXL345{
 	ACCELEROMETER accelerometer;

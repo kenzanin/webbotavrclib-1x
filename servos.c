@@ -80,7 +80,7 @@ static void setSpeed(__ACTUATOR *actuator, DRIVE_SPEED speed){
 }
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_Servos = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);
+static const __ACTUATOR_DRIVER_CLASS c_Servos = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);
 
 
 // Called to turn off the current pulse

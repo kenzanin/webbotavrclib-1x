@@ -44,7 +44,7 @@
 struct c_stepper_impl;
 
 // The generic stepper implementation of the actuator calls
-extern __ACTUATOR_DRIVER_CLASS c_stepper_actuator;
+extern const __ACTUATOR_DRIVER_CLASS c_stepper_actuator;
 
 
 // A generic stepper motor

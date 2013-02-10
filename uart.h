@@ -58,7 +58,7 @@ typedef struct s_uart {
 extern HW_UART Uarts[];
 
 // Class definition for a hardware UART
-extern UART_CLASS c_hw_uart;
+extern const UART_CLASS c_hw_uart;
 
 // Number of uarts
 extern const uint8_t NUM_UARTS;

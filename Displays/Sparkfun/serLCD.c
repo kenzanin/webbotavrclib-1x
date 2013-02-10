@@ -99,9 +99,9 @@ static void	cls(DISPLAY* display){
 }
 
 // The DDRAM address for the start of each line on a 20 character display
-static uint8_t PROGMEM lineStartAddr20[] = {0x00, 0x40, 0x14, 0x54 };
+static uint8_t const PROGMEM lineStartAddr20[] = {0x00, 0x40, 0x14, 0x54 };
 // The DDRAM address for the start of each line on a 16 character display
-static uint8_t PROGMEM lineStartAddr16[] = {0x00, 0x40, 0x10, 0x50 };
+static uint8_t const PROGMEM lineStartAddr16[] = {0x00, 0x40, 0x10, 0x50 };
 
 // Goto x,y cursor location
 static void	gotoXY(DISPLAY* display,DISPLAY_COLUMN x, DISPLAY_LINE y){
@@ -145,5 +145,5 @@ static void vgraph(DISPLAY* display,DISPLAY_COLUMN x,DISPLAY_COLUMN y, uint16_t 
 }
 
 
-DISPLAY_CLASS PROGMEM c_SERLCD = MAKE_DISPLAY_CLASS(&init,&cls,null,&gotoXY, null, null, &backlight, &brightness, null, &sendRawByte,&hgraph,&vgraph,null);
+DISPLAY_CLASS const PROGMEM c_SERLCD = MAKE_DISPLAY_CLASS(&init,&cls,null,&gotoXY, null, null, &backlight, &brightness, null, &sendRawByte,&hgraph,&vgraph,null);
 

@@ -47,7 +47,7 @@
 #include "../_compass_common.h"
 #include "../../../i2cBus.h"
 
-extern COMPASS_CLASS c_HMC6352;
+extern const COMPASS_CLASS c_HMC6352;
 
 typedef struct s_HMC6352{
 	COMPASS 	 compass;

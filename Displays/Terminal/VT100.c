@@ -113,6 +113,6 @@ static void lineWrap(DISPLAY* display,boolean on){
 }
 
 
-DISPLAY_CLASS PROGMEM c_VT100 = MAKE_DISPLAY_CLASS(&init,&cls,null,&gotoXY, &lineWrap, null, null, null, null, &sendRawByte,&hgraph,&vgraph,null);
+DISPLAY_CLASS const PROGMEM c_VT100 = MAKE_DISPLAY_CLASS(&init,&cls,null,&gotoXY, &lineWrap, null, null, null, null, &sendRawByte,&hgraph,&vgraph,null);
 
 

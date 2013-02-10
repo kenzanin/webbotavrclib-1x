@@ -47,4 +47,4 @@ static void __Phidget_Humidity_read(SENSOR* sensor){
 	device->humidity.percent = adc;
 }
 
-HUMIDITY_CLASS c_Phidget_Humidity = MAKE_HUMIDITY_CLASS(null,&__Phidget_Humidity_read, 0 ,0 );
+HUMIDITY_CLASS const c_Phidget_Humidity = MAKE_HUMIDITY_CLASS(null,&__Phidget_Humidity_read, 0 ,0 );

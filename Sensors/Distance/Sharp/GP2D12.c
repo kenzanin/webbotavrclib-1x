@@ -59,6 +59,6 @@ static void __GP2D12_read(SENSOR* sensor){
 	device->distance.cm = 27048.0 * pow(adc,-0.9988);
 }
 
-DISTANCE_CLASS c_Sharp_GP2D12 = MAKE_DISTANCE_CLASS(null,&__GP2D12_read,0,0);
+DISTANCE_CLASS const c_Sharp_GP2D12 = MAKE_DISTANCE_CLASS(null,&__GP2D12_read,0,0);
 
 

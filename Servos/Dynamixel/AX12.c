@@ -53,9 +53,7 @@
 #include "../../core.h"
 
 
-static __ACTUATOR_DRIVER_CLASS c_ax12;
-
-
+static const __ACTUATOR_DRIVER_CLASS c_ax12;
 
 void ax12Send(const DYNAMIXEL_AX12_DRIVER* driver, uint8_t id, size_t len, uint8_t* data){
 	HW_UART* uart = driver->ax12uart;
@@ -200,4 +198,4 @@ static void setSpeed(__ACTUATOR *actuator, DRIVE_SPEED speed){
 
 
 
-static __ACTUATOR_DRIVER_CLASS c_ax12 = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);
+static const __ACTUATOR_DRIVER_CLASS c_ax12 = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);

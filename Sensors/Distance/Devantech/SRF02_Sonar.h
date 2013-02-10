@@ -43,7 +43,7 @@
 #include "../_distance_common.h"
 #include "../../../i2cBus.h"
 
-extern DISTANCE_CLASS c_Devantech_SRF02;
+extern const DISTANCE_CLASS c_Devantech_SRF02;
 
 typedef struct s_Devantech_SRF02{
 	DISTANCE 		distance;

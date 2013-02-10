@@ -64,7 +64,7 @@
 #include "../../../a2d.h"
 
 // The class used to read a raw value
-extern ACCELEROMETER_CLASS c_DE_ACCM3D2;
+extern const ACCELEROMETER_CLASS c_DE_ACCM3D2;
 
 typedef struct s_DE_ACCM3D2{
 	ACCELEROMETER accelerometer;

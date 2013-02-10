@@ -53,7 +53,7 @@
 #include "../_voltage_common.h"
 #include "../../../a2d.h"
 
-extern VOLTAGE_CLASS c_Phidget_30V;
+extern const VOLTAGE_CLASS c_Phidget_30V;
 
 typedef struct s_Phidget_30V{
 	VOLTAGE voltage;

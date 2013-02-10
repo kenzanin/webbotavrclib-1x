@@ -75,8 +75,8 @@ static TICK_COUNT _CLOCK_US_;
 static volatile TICK_COUNT clockTicks;
 
 // The prescale factors for the different timers
-uint16_t PROGMEM TimerPrescaleFactor[] 		= {0,1,8,   64,    256,1024};
-uint16_t PROGMEM TimerRTCPrescaleFactor[] 	= {0,1,8,32,64,128,256,1024};
+uint16_t const PROGMEM TimerPrescaleFactor[] 		= {0,1,8,   64,    256,1024};
+uint16_t const PROGMEM TimerRTCPrescaleFactor[] 	= {0,1,8,32,64,128,256,1024};
 
 
 
@@ -638,8 +638,8 @@ CHANNEL_MODE compareGetOutputMode(const TimerCompare* channel){
 
 	return (CHANNEL_MODE)val;
 }
-uint8_t PROGMEM __3bit_modes[]={0,1,255,255,2,3,255,255,255,255,255,5,255,255,255,7};
-uint8_t PROGMEM __2bit_modes[]={0,1,255,255,2,3};
+uint8_t const PROGMEM __3bit_modes[]={0,1,255,255,2,3,255,255,255,255,255,5,255,255,255,7};
+uint8_t const PROGMEM __2bit_modes[]={0,1,255,255,2,3};
 
 /*
 TIMER_MODE timerGetMode(const Timer*timer){

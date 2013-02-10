@@ -66,4 +66,4 @@ static void __CMPS09_read(SENSOR* sensor){
 }
 
 // Maximum refresh rate is 33ms
-COMPASS_CLASS c_CMPS09_i2c = MAKE_COMPASS_CLASS(null,&__CMPS09_read, 0 ,33 );
+COMPASS_CLASS const c_CMPS09_i2c = MAKE_COMPASS_CLASS(null,&__CMPS09_read, 0 ,33 );

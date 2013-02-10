@@ -64,7 +64,7 @@ extern "C" {
 // The longest possible NMEA msg length, 82 bytes plus zero delimiter
 #define MAX_NMEA_MSG 83
 
-extern GPS_CLASS c_gps_nmea;
+extern const GPS_CLASS c_gps_nmea;
 
 typedef struct s_gps_nmea{
 	GPS_COMMON gps;				// Include stuff common to all gps devices

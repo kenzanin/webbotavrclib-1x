@@ -56,7 +56,7 @@
 #include "../_distance_common.h"
 #include "../../../iopin.h"
 
-extern DISTANCE_CLASS c_PingSonar;
+extern const DISTANCE_CLASS c_PingSonar;
 
 typedef struct s_PingSonar{
 	DISTANCE 		distance;

@@ -160,6 +160,6 @@ static void customChar(DISPLAY* display, const uint8_t* pgm_def, uint8_t charNum
 	}
 }
 
-DISPLAY_CLASS PROGMEM c_lcd03_i2c = MAKE_DISPLAY_CLASS(&init,&cls,&home,&gotoXY, null, null, &backlight, null, null, &sendRawByte,&hgraph,&vgraph,&customChar);
+DISPLAY_CLASS const PROGMEM c_lcd03_i2c = MAKE_DISPLAY_CLASS(&init,&cls,&home,&gotoXY, null, null, &backlight, null, null, &sendRawByte,&hgraph,&vgraph,&customChar);
 
 

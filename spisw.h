@@ -57,7 +57,7 @@ typedef struct s_spi_sw {
 } SPI_SW;
 
 // Class definition for a hardware SPI
-extern SPI_CLASS c_sw_spi;
+extern const SPI_CLASS c_sw_spi;
 
 // Constructor for a hardware SPI interface
 #define MAKE_SW_SPI(devices,mosi,miso,sclk) {MAKE_SPI_ABSTRACT_BUS(&c_sw_spi,devices),mosi,miso,sclk}

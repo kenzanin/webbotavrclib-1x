@@ -52,7 +52,7 @@
  * GP2D12
  */
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2D12;
+extern const DISTANCE_CLASS c_Sharp_GP2D12;
 
 typedef struct s_Sharp_GP2D12{
 	DISTANCE distance;
@@ -69,7 +69,7 @@ typedef struct s_Sharp_GP2D12{
  */
 
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2D120;
+extern const DISTANCE_CLASS c_Sharp_GP2D120;
 
 typedef struct s_Sharp_GP2D120{
 	DISTANCE distance;
@@ -86,7 +86,7 @@ typedef struct s_Sharp_GP2D120{
  */
 
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2D15;
+extern const DISTANCE_CLASS c_Sharp_GP2D15;
 
 typedef struct s_Sharp_GP2D15{
 	DISTANCE distance;
@@ -104,7 +104,7 @@ typedef struct s_Sharp_GP2D15{
  */
 
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2Y0A02YK;
+extern const DISTANCE_CLASS c_Sharp_GP2Y0A02YK;
 
 typedef struct s_Sharp_GP2Y0A02YK{
 	DISTANCE distance;
@@ -120,7 +120,7 @@ typedef struct s_Sharp_GP2Y0A02YK{
  * GP2Y0A21YK
  */
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2Y0A21YK;
+extern const DISTANCE_CLASS c_Sharp_GP2Y0A21YK;
 
 typedef struct s_Sharp_GP2Y0A21YK{
 	DISTANCE distance;
@@ -136,7 +136,7 @@ typedef struct s_Sharp_GP2Y0A21YK{
  * GP2Y0A02YK0F
  */
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2Y0A02YK0F;
+extern const DISTANCE_CLASS c_Sharp_GP2Y0A02YK0F;
 
 typedef struct s_Sharp_GP2Y0A02YK0F{
 	DISTANCE distance;
@@ -153,7 +153,7 @@ typedef struct s_Sharp_GP2Y0A02YK0F{
  * GP2Y0A700K0F
  */
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2Y0A700K0F;
+extern const DISTANCE_CLASS c_Sharp_GP2Y0A700K0F;
 
 typedef struct s_Sharp_GP2Y0A700K0F{
 	DISTANCE distance;
@@ -169,7 +169,7 @@ typedef struct s_Sharp_GP2Y0A700K0F{
  * GP2Y0A710K0F
  */
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2Y0A710K0F;
+extern const DISTANCE_CLASS c_Sharp_GP2Y0A710K0F;
 
 typedef struct s_Sharp_GP2Y0A710K0F{
 	DISTANCE distance;

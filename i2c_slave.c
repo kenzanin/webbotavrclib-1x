@@ -103,7 +103,8 @@ static inline void i2cReceiveByte(boolean ackFlag){
 
 
 // I2C (TWI) interrupt service routine
-ISR(SIG_2WIRE_SERIAL)
+// ISR(SIG_2WIRE_SERIAL)
+SIGNAL(TWI_vect)
 {
 	// read status bits
 	uint8_t status = inb(TWSR) & TWSR_STATUS_MASK;

@@ -53,7 +53,7 @@
 #include "../_humidity_common.h"
 #include "../../../a2d.h"
 
-extern HUMIDITY_CLASS c_Phidget_Humidity;
+extern const HUMIDITY_CLASS c_Phidget_Humidity;
 
 typedef struct S_Phidget_Humidity{
 	HUMIDITY 	 humidity;

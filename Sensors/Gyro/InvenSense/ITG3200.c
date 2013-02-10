@@ -133,4 +133,4 @@ static void read(SENSOR* sensor){
 }
 
 // Make the class, 50ms on startup, 0ms between readings
-GYRO_CLASS c_ITG3200 = MAKE_GYRO_CLASS(&init,&read,50,0);
+GYRO_CLASS const c_ITG3200 = MAKE_GYRO_CLASS(&init,&read,50,0);

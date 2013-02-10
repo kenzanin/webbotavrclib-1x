@@ -204,4 +204,4 @@ static void stop(const I2C_ABSTRACT_BUS* bus){
 
 
 // Expose this implementation to the linker
-I2C_CLASS c_hw_i2c = MAKE_I2C_CLASS(&init, &start,&stop, &getByte, &putByte, &speed);
+I2C_CLASS const c_hw_i2c = MAKE_I2C_CLASS(&init, &start,&stop, &getByte, &putByte, &speed);

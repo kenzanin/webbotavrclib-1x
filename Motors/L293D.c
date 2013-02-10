@@ -104,7 +104,7 @@ static void setConnected(__ACTUATOR *actuator, boolean connected){
 }
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_l293 = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
+static const __ACTUATOR_DRIVER_CLASS c_l293 = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
 
 
 // Pass the list of motors, the list should be in PROGMEM space to save Flash RAM

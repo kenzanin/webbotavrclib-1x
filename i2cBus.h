@@ -111,8 +111,8 @@ typedef struct PROGMEM c_i2c{
 } I2C_CLASS;
 #define MAKE_I2C_CLASS(init,start,stop,get,put,speed) {init,start,stop,get,put,speed }
 
-extern I2C_CLASS c_hw_i2c;	// The hardware implementation defined elsewhere
-extern I2C_CLASS c_sw_i2c;	// The software implementation defined elsewhere
+extern const I2C_CLASS c_hw_i2c;	// The hardware implementation defined elsewhere
+extern const I2C_CLASS c_sw_i2c;	// The software implementation defined elsewhere
 
 /*-------------------------------------------------------------
    Things you can do with an abstract I2C bus

@@ -74,7 +74,7 @@ static void impl_act_setConnected(__ACTUATOR* act,boolean connected){
 	}
 }
 
-__ACTUATOR_DRIVER_CLASS c_stepper_actuator = MAKE_ACTUATOR_DRIVER_CLASS(&impl_act_setSpeed,&impl_act_setConnected);
+__ACTUATOR_DRIVER_CLASS const c_stepper_actuator = MAKE_ACTUATOR_DRIVER_CLASS(&impl_act_setSpeed,&impl_act_setConnected);
 
 // --- End of actuator interface ----------------------
 

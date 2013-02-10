@@ -39,7 +39,7 @@
 #include "../../../i2cBus.h"
 
 // The class used to read a raw value
-extern GYRO_CLASS c_ITG3200;
+extern const GYRO_CLASS c_ITG3200;
 
 typedef struct s_ITG3200{
 	GYRO 		 gyro;

@@ -734,7 +734,7 @@ $(OUT)/uart.d\
 $(OUT)/uartsw.d
 
 CFLAGS = -DBUILDING_LIBRARY -Wall -Os -gdwarf-2 -std=gnu99 -fpack-struct -fshort-enums  -funsigned-char -funsigned-bitfields
-CPPFLAGS = -Wall -gdwarf-2            -fpack-struct -fshort-enums  -funsigned-char -funsigned-bitfields
+CPPFLAGS = -Wall -gdwarf-2 -fpack-struct -fshort-enums  -funsigned-char -funsigned-bitfields -Werr
 .PHONY: default
 
 default:

@@ -40,7 +40,7 @@
 
 
 // Class definition for an AVRcam
-extern CAMERA_CLASS c_avrcam;
+extern const CAMERA_CLASS c_avrcam;
 
 
 // Define an AVRcam camera

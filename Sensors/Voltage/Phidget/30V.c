@@ -46,4 +46,4 @@ static void __Phidget_30V_read(SENSOR* sensor){
 	device->voltage.volts = volts;
 }
 
-VOLTAGE_CLASS c_Phidget_30V = MAKE_VOLTAGE_CLASS(null,&__Phidget_30V_read, 0 ,0 );
+VOLTAGE_CLASS const c_Phidget_30V = MAKE_VOLTAGE_CLASS(null,&__Phidget_30V_read, 0 ,0 );

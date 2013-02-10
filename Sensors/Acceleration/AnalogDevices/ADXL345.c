@@ -84,4 +84,4 @@ static void _read(SENSOR* sensor){
 }
 
 // Needs 11.1 ms to start up
-ACCELEROMETER_CLASS c_ADXL345 = MAKE_ACCELEROMETER_CLASS(&_init,&_read,12,0);
+ACCELEROMETER_CLASS const c_ADXL345 = MAKE_ACCELEROMETER_CLASS(&_init,&_read,12,0);

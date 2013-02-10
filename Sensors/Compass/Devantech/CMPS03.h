@@ -65,7 +65,7 @@
  *
  */
 
-extern COMPASS_CLASS c_CMPS03;
+extern const COMPASS_CLASS c_CMPS03;
 
 typedef struct s_CMPS03{
 	COMPASS 	 compass;
@@ -79,7 +79,7 @@ typedef struct s_CMPS03{
 /*
  *  Access the compass via the I2C bus.
  */
-extern COMPASS_CLASS c_CMPS03_i2c;
+extern const COMPASS_CLASS c_CMPS03_i2c;
 
 typedef struct s_CMPS03_i2c{
 	COMPASS 	 compass;

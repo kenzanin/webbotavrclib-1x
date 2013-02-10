@@ -50,7 +50,7 @@
 #include "../_temperature_common.h"
 #include "../../../i2cBus.h"
 
-extern TEMPERATURE_CLASS c_Devantech_TPA81;
+extern const TEMPERATURE_CLASS c_Devantech_TPA81;
 
 typedef struct s_Devantech_TPA81{
 	TEMPERATURE 	temperature;

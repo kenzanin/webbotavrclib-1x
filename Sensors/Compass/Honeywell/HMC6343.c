@@ -120,4 +120,4 @@ static void __HMC6343_read(SENSOR* sensor){
 
 // Requires a 500ms delay before being read for the first time
 // The fastest it can go is 10Hz ie every 100ms
-COMPASS_CLASS c_HMC6343 = MAKE_COMPASS_CLASS(null,&__HMC6343_read, 500 , 100 );
+COMPASS_CLASS const c_HMC6343 = MAKE_COMPASS_CLASS(null,&__HMC6343_read, 500 , 100 );

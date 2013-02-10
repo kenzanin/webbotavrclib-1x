@@ -66,5 +66,5 @@ static void _read(SENSOR* sensor){
 }
 
 // 40ms between reads
-TEMPERATURE_CLASS c_Devantech_TPA81 = MAKE_TEMPERATURE_CLASS(null,&_read, 0 ,40 );
+TEMPERATURE_CLASS const c_Devantech_TPA81 = MAKE_TEMPERATURE_CLASS(null,&_read, 0 ,40 );
 

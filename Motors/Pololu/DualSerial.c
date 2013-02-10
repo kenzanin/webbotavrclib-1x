@@ -103,7 +103,7 @@ static void setSpeed(__ACTUATOR *actuator, DRIVE_SPEED speed){
 }
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_Pololu_DualSerial = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
+static const __ACTUATOR_DRIVER_CLASS c_Pololu_DualSerial = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,&setConnected);
 
 void pololuDualSerialInit(POLOLU_DS_DRIVER* driver){
 	_uartInit(driver->uart,driver->baudRate);

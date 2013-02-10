@@ -92,7 +92,7 @@ static void __idg500_read(SENSOR* sensor){
 }
 
 // 200ms startup time, 20ms between readings
-GYRO_CLASS c_IDG500 = MAKE_GYRO_CLASS(&__idg500_init,&__idg500_read,200,20);
+GYRO_CLASS const c_IDG500 = MAKE_GYRO_CLASS(&__idg500_init,&__idg500_read,200,20);
 
 
 

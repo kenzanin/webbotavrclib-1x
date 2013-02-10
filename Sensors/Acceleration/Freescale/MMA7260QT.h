@@ -82,7 +82,7 @@
 #include "../../../a2d.h"
 
 // The class used to read a raw value
-extern ACCELEROMETER_CLASS c_FS_MMA7260QT;
+extern const ACCELEROMETER_CLASS c_FS_MMA7260QT;
 
 typedef struct s_FS_MMA7260QT{
 	ACCELEROMETER accelerometer;

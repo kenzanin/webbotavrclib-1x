@@ -75,5 +75,5 @@ static void __ping_read(SENSOR* sensor){
 }
 
 // Requires a 200us (so say 1ms) delay between readings
-DISTANCE_CLASS c_PingSonar = MAKE_DISTANCE_CLASS(null,&__ping_read,0,1);
+DISTANCE_CLASS const c_PingSonar = MAKE_DISTANCE_CLASS(null,&__ping_read,0,1);
 

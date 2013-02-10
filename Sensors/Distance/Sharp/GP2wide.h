@@ -45,7 +45,7 @@ extern "C" {
  * Pin 8 is the supply voltage
  */
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2Y3A002K0F;
+extern const DISTANCE_CLASS c_Sharp_GP2Y3A002K0F;
 
 typedef struct s_Sharp_GP2Y3A002K0F{
 	DISTANCE distance;		// Holds the 'average' distance across all sensors
@@ -70,7 +70,7 @@ typedef struct s_Sharp_GP2Y3A002K0F{
  * Pin 8 is the supply voltage
  */
 // The class used to read a raw value
-extern DISTANCE_CLASS c_Sharp_GP2Y3A003K0F;
+extern const DISTANCE_CLASS c_Sharp_GP2Y3A003K0F;
 
 typedef struct s_Sharp_GP2Y3A003K0F{
 	DISTANCE distance;		// Holds the 'average' distance across all sensors

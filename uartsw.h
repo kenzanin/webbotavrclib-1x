@@ -97,7 +97,7 @@ typedef struct s_uart_sw {
 } SW_UART;
 
 // Class definition for a software UART
-extern UART_CLASS c_sw_uart;
+extern const UART_CLASS c_sw_uart;
 
 // Constructor for a buffered software UART
 #define MAKE_SW_UART_BUFFERED(rxBuf,txBuf,timer,rxpin,txpin,inv,reader,writer) \

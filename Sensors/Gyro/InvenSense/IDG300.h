@@ -63,7 +63,7 @@
 #include "../../../a2d.h"
 
 // The class used to read a raw value
-extern GYRO_CLASS c_IDG300;
+extern const GYRO_CLASS c_IDG300;
 
 typedef struct s_IDG300{
 	GYRO 		 gyro;

@@ -40,7 +40,7 @@
 #include "../../timer.h"
 #include "../../iopin.h"
 
-extern STEPPER_MOTOR_IMPL c_a4983;
+extern const STEPPER_MOTOR_IMPL c_a4983;
 
 // A board controls an individual motor
 typedef struct s_a4983_board {

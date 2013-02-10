@@ -121,4 +121,4 @@ void HMC5843_50Hz(HMC5843* compass){
 
 // Requires a 100ms delay before being read for the first time
 // The fastest speed is 50Hz ie every 20ms
-COMPASS_CLASS c_HMC5843 = MAKE_COMPASS_CLASS(&_init,&_read, 100 , 20 );
+COMPASS_CLASS const c_HMC5843 = MAKE_COMPASS_CLASS(&_init,&_read, 100 , 20 );

@@ -46,5 +46,5 @@ static void __Phidget_DC50A_read(SENSOR* sensor){
 	device->current.amps = amps;
 }
 
-CURRENT_CLASS c_Phidget_DC50A = MAKE_CURRENT_CLASS(null,&__Phidget_DC50A_read, 0 ,0 );
+const CURRENT_CLASS c_Phidget_DC50A = MAKE_CURRENT_CLASS(null,&__Phidget_DC50A_read, 0 ,0 );
 

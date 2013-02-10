@@ -71,8 +71,8 @@
 
 #include "../_encoder_common.h"
 
-extern ENCODER_CLASS c_quadrature;
-extern ENCODER_CLASS c_quadraturex2;
+extern const ENCODER_CLASS c_quadrature;
+extern const ENCODER_CLASS c_quadraturex2;
 
 typedef struct s_quadrature{
 	ENCODER		 encoder;

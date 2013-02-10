@@ -113,5 +113,5 @@ void HMC5883L_75Hz(HMC5883L* compass){
 
 // Requires a 100ms delay before being read for the first time
 // The fastest speed is 75Hz ie every 13.33ms
-COMPASS_CLASS c_HMC5883L = MAKE_COMPASS_CLASS(&_init,&_read, 100 , 14 );
+COMPASS_CLASS const c_HMC5883L = MAKE_COMPASS_CLASS(&_init,&_read, 100 , 14 );
 

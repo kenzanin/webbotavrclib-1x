@@ -81,7 +81,7 @@ static void setSpeed(__ACTUATOR *actuator, DRIVE_SPEED speed){
 
 
 // Define the class, note that you cannot connect/disconnect servos
-static __ACTUATOR_DRIVER_CLASS c_miniSSC_servos = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);
+static const __ACTUATOR_DRIVER_CLASS c_miniSSC_servos = MAKE_ACTUATOR_DRIVER_CLASS(&setSpeed,null);
 
 void _servoSerialInit(SERVO_DRIVER* driver, UART* uart, BAUD_RATE baud, SERVO_PROTOCOL protocol){
 	driver->specific.serial.uart = uart;

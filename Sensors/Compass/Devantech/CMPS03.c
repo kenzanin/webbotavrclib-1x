@@ -67,4 +67,4 @@ static void __CMPS03_read(SENSOR* sensor){
 	compass->compass.bearingDegrees = (duration + 50) / 100;// round to the nearest degree
 }
 
-COMPASS_CLASS c_CMPS03 = MAKE_COMPASS_CLASS(null,&__CMPS03_read, 0 ,0 );
+COMPASS_CLASS const c_CMPS03 = MAKE_COMPASS_CLASS(null,&__CMPS03_read, 0 ,0 );

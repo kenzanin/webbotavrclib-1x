@@ -114,7 +114,7 @@ static void mux_setSpeed(__ACTUATOR *actuator, DRIVE_SPEED speed){
 }
 
 // Define the class
-static __ACTUATOR_DRIVER_CLASS c_mux_Servos = MAKE_ACTUATOR_DRIVER_CLASS(&mux_setSpeed,null);
+static const __ACTUATOR_DRIVER_CLASS c_mux_Servos = MAKE_ACTUATOR_DRIVER_CLASS(&mux_setSpeed,null);
 
 void servosMuxInit(SERVO_DRIVER* driver, const IOPin* pwm16, const IOPin* mux1, const IOPin* mux2, const IOPin* mux3){
 	const TimerCompare* channel = compareFromIOPin(pwm16);

@@ -226,7 +226,7 @@ static void init(SENSOR* sensor){
 }
 
 // 10ms startup time
-PRESSURE_CLASS PROGMEM c_BMP085 = MAKE_PRESSURE_CLASS(&init,&read,10,0);
+PRESSURE_CLASS const PROGMEM c_BMP085 = MAKE_PRESSURE_CLASS(&init,&read,10,0);
 
 
 

@@ -56,7 +56,7 @@ typedef struct s_sparkfun_serLCD {
 	BAUD_RATE baudrate;
 } SPARKFUN_SERLCD;
 
-extern DISPLAY_CLASS c_SERLCD;
+extern const DISPLAY_CLASS c_SERLCD;
 #define MAKE_SPARKFUN_SERLCD_16_2(uart,baud,writer) { \
 	MAKE_DISPLAY(&c_SERLCD, 16, 2, writer), \
 	&((uart)->_uart_),baud	\

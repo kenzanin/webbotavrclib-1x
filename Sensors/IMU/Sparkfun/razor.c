@@ -113,4 +113,4 @@ start:
 	}
 }
 
-IMU_CLASS c_razor = MAKE_IMU_CLASS(&_init, &_read, STARTUP_DELAY , READ_DELAY );
+IMU_CLASS const c_razor = MAKE_IMU_CLASS(&_init, &_read, STARTUP_DELAY , READ_DELAY );

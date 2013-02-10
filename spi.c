@@ -69,7 +69,7 @@ static void 	__spiHWSetDataOrder(SPI_ABSTRACT_BUS* spi,SPI_DATA_ORDER order);
 static void 	__spiHWSetMode(SPI_ABSTRACT_BUS* spi,SPI_MODE mode);
 static uint8_t 	__spiHWSendByte(SPI_ABSTRACT_BUS* spi, uint8_t data);
 
-SPI_CLASS PROGMEM c_hw_spi = MAKE_SPI_CLASS(&__spiHWInit, &__spiHWOff,&__spiHWSetClock,&__spiHWSetDataOrder, &__spiHWSetMode,&__spiHWSendByte, null, null,null);
+SPI_CLASS const PROGMEM c_hw_spi = MAKE_SPI_CLASS(&__spiHWInit, &__spiHWOff,&__spiHWSetClock,&__spiHWSetDataOrder, &__spiHWSetMode,&__spiHWSendByte, null, null,null);
 
 
 #if defined (__AVR_ATmega640__) || defined (__AVR_ATmega128__) || defined (__AVR_ATmega1280__) || defined (__AVR_ATmega2560__) || defined (__AVR_ATmega2561__) || defined (__AVR_ATmega128RFA1__)

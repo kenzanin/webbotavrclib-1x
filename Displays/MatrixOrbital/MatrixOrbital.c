@@ -176,4 +176,4 @@ static void vgraph(DISPLAY* display,DISPLAY_COLUMN x,DISPLAY_COLUMN y, uint16_t 
 
 
 
-DISPLAY_CLASS PROGMEM c_MatrixOrbital = MAKE_DISPLAY_CLASS(&init,&cls,null,&gotoXY, &lineWrap, &autoScroll, &backlight, &setBrightness, &setContrast,&sendRawByte, &hgraph, &vgraph,&customChar);
+DISPLAY_CLASS const PROGMEM c_MatrixOrbital = MAKE_DISPLAY_CLASS(&init,&cls,null,&gotoXY, &lineWrap, &autoScroll, &backlight, &setBrightness, &setContrast,&sendRawByte, &hgraph, &vgraph,&customChar);

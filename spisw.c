@@ -62,7 +62,7 @@ static void 	readMany(const SPI_ABSTRACT_DEVICE* device,void* dta, size_t size);
 static void 	writeMany(const SPI_ABSTRACT_DEVICE* device,const void* dta, size_t size);
 static void	 	select(const SPI_ABSTRACT_DEVICE* device,boolean selected);// Device selection change
 
-SPI_CLASS PROGMEM c_sw_spi = MAKE_SPI_CLASS(&__spiSWInit, &__spiSWOff,&__spiSWSetClock,&__spiSWSetDataOrder, &__spiSWSetMode,&__spiSWSendByte,&readMany,&writeMany,&select);
+SPI_CLASS const PROGMEM c_sw_spi = MAKE_SPI_CLASS(&__spiSWInit, &__spiSWOff,&__spiSWSetClock,&__spiSWSetDataOrder, &__spiSWSetMode,&__spiSWSendByte,&readMany,&writeMany,&select);
 
 
 // Called under interrupts when the chip select pin has changed

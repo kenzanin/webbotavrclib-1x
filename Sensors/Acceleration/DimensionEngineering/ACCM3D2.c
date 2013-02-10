@@ -79,6 +79,6 @@ static void __de_accm3d2_read(SENSOR* sensor){
 
 }
 
-ACCELEROMETER_CLASS c_DE_ACCM3D2 = MAKE_ACCELEROMETER_CLASS(null,&__de_accm3d2_read,0,0);
+ACCELEROMETER_CLASS const c_DE_ACCM3D2 = MAKE_ACCELEROMETER_CLASS(null,&__de_accm3d2_read,0,0);
 
 

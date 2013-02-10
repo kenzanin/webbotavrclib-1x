@@ -155,7 +155,7 @@ static void	startXmitMode(UART* _uart){
 
 
 // Create a class with the method overrides for this type of UART
-UART_CLASS c_hw_uart = MAKE_UART_CLASS( \
+UART_CLASS const c_hw_uart = MAKE_UART_CLASS( \
 		&__uartHWSetBaudRate, 	\
 		&__uartHWStartXmit, 	\
 		&__uartHWInit, 			\

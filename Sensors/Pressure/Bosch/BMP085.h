@@ -37,7 +37,7 @@
 #include "../../Temperature/_temperature_common.h"
 
 // The class used to read a raw value
-extern PRESSURE_CLASS c_BMP085;
+extern const PRESSURE_CLASS c_BMP085;
 
 typedef struct {
    short ac1;

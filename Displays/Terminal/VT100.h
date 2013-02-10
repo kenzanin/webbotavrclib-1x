@@ -41,7 +41,7 @@ typedef struct s_vt100 {
 	BAUD_RATE baudrate;
 } VT100;
 
-extern DISPLAY_CLASS c_VT100;
+extern const DISPLAY_CLASS c_VT100;
 #define MAKE_VT100(cols,rows,uart,baud,writer) { \
 	MAKE_DISPLAY(&c_VT100, cols, rows, writer), \
 	&((uart)->_uart_),baud	\

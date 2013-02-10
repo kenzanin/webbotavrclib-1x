@@ -66,7 +66,7 @@
 #include "libdefs.h"
 
 
-static  uint8_t PROGMEM digits[] = {
+static const uint8_t PROGMEM digits[] = {
 	  //  ABCDEFGH
 		0b11111100,	// 0
 		0b01100000,	// 1
@@ -80,7 +80,7 @@ static  uint8_t PROGMEM digits[] = {
 		0b11100110	// 9
 };
 
-static  uint8_t PROGMEM atoz[] = {
+static const uint8_t PROGMEM atoz[] = {
 	  //  ABCDEFGH
 		0b11101110,	// A
 		0b00111110,	// B

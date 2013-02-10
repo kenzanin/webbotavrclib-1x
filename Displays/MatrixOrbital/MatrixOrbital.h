@@ -48,7 +48,7 @@ typedef struct s_matrix_orbital {
 	BAUD_RATE baudrate; // 9600 or 19200
 } MATRIX_ORBITAL;
 
-extern DISPLAY_CLASS c_MatrixOrbital;
+extern const DISPLAY_CLASS c_MatrixOrbital;
 
 #define MAKE_MATRIX_ORBITAL_MOSAL162A(uart,baud,writer) { \
 	MAKE_DISPLAY(&c_MatrixOrbital, 16, 2, writer), \

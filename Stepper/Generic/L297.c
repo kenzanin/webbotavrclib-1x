@@ -69,5 +69,5 @@ static void	init(STEPPER_MOTOR* stepper){
 
 }
 
-STEPPER_MOTOR_IMPL c_l297 = MAKE_STEPPER_MOTOR_IMPL(&init, &setSpeed,&setConnected,&step);
+STEPPER_MOTOR_IMPL const c_l297 = MAKE_STEPPER_MOTOR_IMPL(&init, &setSpeed,&setConnected,&step);
 

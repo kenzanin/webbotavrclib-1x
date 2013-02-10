@@ -102,7 +102,7 @@ static void __lpr530al_read(SENSOR* sensor){
 }
 
 // 200ms startup time
-GYRO_CLASS c_LPR530AL = MAKE_GYRO_CLASS(&__lpr530al_init,&__lpr530al_read,200,0);
+GYRO_CLASS const c_LPR530AL = MAKE_GYRO_CLASS(&__lpr530al_init,&__lpr530al_read,200,0);
 
 
 

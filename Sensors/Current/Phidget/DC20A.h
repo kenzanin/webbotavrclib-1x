@@ -55,7 +55,7 @@
 #include "../_current_common.h"
 #include "../../../a2d.h"
 
-extern CURRENT_CLASS c_Phidget_DC20A;
+extern CURRENT_CLASS const c_Phidget_DC20A;
 
 typedef struct s_Phidget_DC20A{
 	CURRENT current;

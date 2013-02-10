@@ -561,5 +561,5 @@ static boolean getPixel(CAMERA* camera,uint16_t x, uint16_t y, COLOR * color){
 
 
 // Create the class for the AVRcam
-CAMERA_CLASS c_avrcam = MAKE_CAMERA_CLASS( &init, &xres, &yres, AVRCAM_BINS, AVRCAM_BLOBS,&setBin, &getBlobs, &getPixel, &getVersion);
+CAMERA_CLASS const c_avrcam = MAKE_CAMERA_CLASS( &init, &xres, &yres, AVRCAM_BINS, AVRCAM_BLOBS,&setBin, &getBlobs, &getPixel, &getVersion);
 

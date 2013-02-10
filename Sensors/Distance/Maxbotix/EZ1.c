@@ -66,4 +66,4 @@ static void __ez1_read(SENSOR* sensor){
 
 }
 
-DISTANCE_CLASS c_Maxbotix_EZ1 = MAKE_DISTANCE_CLASS(null,&__ez1_read,0,0);
+DISTANCE_CLASS const c_Maxbotix_EZ1 = MAKE_DISTANCE_CLASS(null,&__ez1_read,0,0);

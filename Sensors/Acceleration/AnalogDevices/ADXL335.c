@@ -75,7 +75,7 @@ static void __ad_adxl335_read(SENSOR* sensor){
 // 			   where CX, CY, CZ are in microfarads (uF).
 // My board has 0.1uF caps so 160*0.1 + 1 => 17ms
 // 20ms between readings since these caps give 50Hz readings ie every 20ms
-ACCELEROMETER_CLASS c_ADXL335 = MAKE_ACCELEROMETER_CLASS(null,&__ad_adxl335_read,20,20);
+ACCELEROMETER_CLASS const c_ADXL335 = MAKE_ACCELEROMETER_CLASS(null,&__ad_adxl335_read,20,20);
 
 
 

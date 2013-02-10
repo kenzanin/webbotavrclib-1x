@@ -135,7 +135,7 @@ static void __GP2Y3A002K0F_read(SENSOR* sensor){
 
 }
 
-DISTANCE_CLASS c_Sharp_GP2Y3A002K0F = MAKE_DISTANCE_CLASS( \
+DISTANCE_CLASS const c_Sharp_GP2Y3A002K0F = MAKE_DISTANCE_CLASS( \
 		&__GP2Y3A002K0F_init, 	/* init routine */  \
 		&__GP2Y3A002K0F_read,	/* read routine */  \
 		0,						/* startp delay ms */ \

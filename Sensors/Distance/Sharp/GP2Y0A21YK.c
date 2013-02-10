@@ -58,5 +58,5 @@ static void __GP2Y0A21YK_read(SENSOR* sensor){
 	device->distance.cm = 8248.6 * pow(adc,-0.8105);
 }
 
-DISTANCE_CLASS c_Sharp_GP2Y0A21YK = MAKE_DISTANCE_CLASS(null,&__GP2Y0A21YK_read,0,0);
+DISTANCE_CLASS const c_Sharp_GP2Y0A21YK = MAKE_DISTANCE_CLASS(null,&__GP2Y0A21YK_read,0,0);
 

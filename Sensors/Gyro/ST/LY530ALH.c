@@ -96,7 +96,7 @@ static void __ly530alh_read(SENSOR* sensor){
 }
 
 // 200ms startup time
-GYRO_CLASS c_LY530ALH = MAKE_GYRO_CLASS(&__ly530alh_init,&__ly530alh_read,200,0);
+GYRO_CLASS const c_LY530ALH = MAKE_GYRO_CLASS(&__ly530alh_init,&__ly530alh_read,200,0);
 
 
 

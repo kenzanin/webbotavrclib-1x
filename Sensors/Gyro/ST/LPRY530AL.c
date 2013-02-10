@@ -95,7 +95,7 @@ static void read(SENSOR* sensor){
 }
 
 // 200ms startup time
-GYRO_CLASS PROGMEM c_LPRY530AL = MAKE_GYRO_CLASS(&init,&read,200,0);
+GYRO_CLASS const PROGMEM c_LPRY530AL = MAKE_GYRO_CLASS(&init,&read,200,0);
 
 
 

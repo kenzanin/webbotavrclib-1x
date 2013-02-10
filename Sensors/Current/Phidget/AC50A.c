@@ -46,4 +46,4 @@ static void __Phidget_AC50A_read(SENSOR* sensor){
 	device->current.amps = amps;
 }
 
-CURRENT_CLASS c_Phidget_AC50A = MAKE_CURRENT_CLASS(null,&__Phidget_AC50A_read, 0 ,0 );
+CURRENT_CLASS const c_Phidget_AC50A = MAKE_CURRENT_CLASS(null,&__Phidget_AC50A_read, 0 ,0 );

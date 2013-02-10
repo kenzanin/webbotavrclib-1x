@@ -47,7 +47,7 @@
 #include "../_distance_common.h"
 #include "../../../a2d.h"
 
-extern DISTANCE_CLASS c_Maxbotix_EZ1;
+extern const DISTANCE_CLASS c_Maxbotix_EZ1;
 
 typedef struct s_Maxbotix_EZ1{
 	DISTANCE 		distance;
