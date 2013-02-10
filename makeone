@@ -1,0 +1,1457 @@
+C_SRCS=\
+./Audio/SOMO14D.c\
+./Audio/Text2Speech/phoneme2sound.c\
+./Audio/Text2Speech/phonemeWriter.c\
+./Audio/Text2Speech/sound2noise.c\
+./Audio/Text2Speech/speech2phoneme.c\
+./Audio/Text2Speech/speechWriter.c\
+./Audio/Text2Speech/vocab_en.c\
+./Audio/tone.c\
+./Audio/toneRTTTL.c\
+./BufferQueue.c\
+./Cameras/AVRcam/avrcam.c\
+./Cameras/Surveyor/blackfin.c\
+./Cameras/Surveyor/blackfin_vb.c\
+./Cameras/Surveyor/blackfin_vc.c\
+./Cameras/Surveyor/blackfin_vf.c\
+./Cameras/Surveyor/blackfin_vm.c\
+./Cameras/Surveyor/blackfin_vp.c\
+./Cameras/_camera_common.c\
+./Controller/Sony/ps2.c\
+./Displays/Devantech/LCD03.c\
+./Displays/Generic/HD44780.c\
+./Displays/MatrixOrbital/MatrixOrbital.c\
+./Displays/Sparkfun/serLCD.c\
+./Displays/Terminal/VT100.c\
+./Displays/_display_common.c\
+./Gait/GaitDesigner.c\
+./Gait/GaitRunner.c\
+./Maths/Matrix3D.c\
+./Maths/Vector2D.c\
+./Maths/Vector3D.c\
+./Motors/DimensionEngineering/Sabertooth.c\
+./Motors/L293D.c\
+./Motors/Pololu/DualSerial.c\
+./Motors/Sanyo/LB1836M.c\
+./Motors/Solarbotics/L298.c\
+./Motors/Toshiba/TB6612FNG_2pin.c\
+./Motors/Toshiba/TB6612FNG_3pin.c\
+./Sensors/Acceleration/AnalogDevices/ADXL335.c\
+./Sensors/Acceleration/AnalogDevices/ADXL345.c\
+./Sensors/Acceleration/DimensionEngineering/ACCM3D2.c\
+./Sensors/Acceleration/Freescale/MMA7260QT.c\
+./Sensors/Acceleration/_acceleration_common.c\
+./Sensors/Acceleration/_acceleration_dump.c\
+./Sensors/Compass/Devantech/CMPS03.c\
+./Sensors/Compass/Devantech/CMPS03_i2c.c\
+./Sensors/Compass/Devantech/CMPS09_i2c.c\
+./Sensors/Compass/Honeywell/HMC5843.c\
+./Sensors/Compass/Honeywell/HMC5883L.c\
+./Sensors/Compass/Honeywell/HMC6343.c\
+./Sensors/Compass/Honeywell/HMC6352.c\
+./Sensors/Compass/_compass_common.c\
+./Sensors/Current/Phidget/AC20A.c\
+./Sensors/Current/Phidget/AC50A.c\
+./Sensors/Current/Phidget/DC20A.c\
+./Sensors/Current/Phidget/DC50A.c\
+./Sensors/Current/_current_common.c\
+./Sensors/Distance/Devantech/SRF02_Sonar.c\
+./Sensors/Distance/Devantech/SRF04_Sonar.c\
+./Sensors/Distance/Devantech/SRF05_Sonar.c\
+./Sensors/Distance/Devantech/SRF08_Sonar.c\
+./Sensors/Distance/Maxbotix/EZ1.c\
+./Sensors/Distance/Maxbotix/MB7077.c\
+./Sensors/Distance/Ping/PingSonar.c\
+./Sensors/Distance/Sharp/GP2D12.c\
+./Sensors/Distance/Sharp/GP2D120.c\
+./Sensors/Distance/Sharp/GP2D15.c\
+./Sensors/Distance/Sharp/GP2Y0A02YK.c\
+./Sensors/Distance/Sharp/GP2Y0A02YK0F.c\
+./Sensors/Distance/Sharp/GP2Y0A21YK.c\
+./Sensors/Distance/Sharp/GP2Y0A700K0F.c\
+./Sensors/Distance/Sharp/GP2Y0A710K0F.c\
+./Sensors/Distance/Sharp/GP2Y3A002K0F.c\
+./Sensors/Distance/Sharp/GP2Y3A003K0F.c\
+./Sensors/Distance/_distance_common.c\
+./Sensors/Encoder/Generic/fastquad0.c\
+./Sensors/Encoder/Generic/fastquad1.c\
+./Sensors/Encoder/Generic/fastquad2.c\
+./Sensors/Encoder/Generic/fastquad3.c\
+./Sensors/Encoder/Generic/fastquad4.c\
+./Sensors/Encoder/Generic/fastquad5.c\
+./Sensors/Encoder/Generic/fastquad6.c\
+./Sensors/Encoder/Generic/fastquad7.c\
+./Sensors/Encoder/Generic/fastquadx2_0_1.c\
+./Sensors/Encoder/Generic/fastquadx2_0_2.c\
+./Sensors/Encoder/Generic/fastquadx2_0_3.c\
+./Sensors/Encoder/Generic/fastquadx2_0_4.c\
+./Sensors/Encoder/Generic/fastquadx2_0_5.c\
+./Sensors/Encoder/Generic/fastquadx2_0_6.c\
+./Sensors/Encoder/Generic/fastquadx2_0_7.c\
+./Sensors/Encoder/Generic/fastquadx2_1_0.c\
+./Sensors/Encoder/Generic/fastquadx2_1_2.c\
+./Sensors/Encoder/Generic/fastquadx2_1_3.c\
+./Sensors/Encoder/Generic/fastquadx2_1_4.c\
+./Sensors/Encoder/Generic/fastquadx2_1_5.c\
+./Sensors/Encoder/Generic/fastquadx2_1_6.c\
+./Sensors/Encoder/Generic/fastquadx2_1_7.c\
+./Sensors/Encoder/Generic/fastquadx2_2_0.c\
+./Sensors/Encoder/Generic/fastquadx2_2_1.c\
+./Sensors/Encoder/Generic/fastquadx2_2_3.c\
+./Sensors/Encoder/Generic/fastquadx2_2_4.c\
+./Sensors/Encoder/Generic/fastquadx2_2_5.c\
+./Sensors/Encoder/Generic/fastquadx2_2_6.c\
+./Sensors/Encoder/Generic/fastquadx2_2_7.c\
+./Sensors/Encoder/Generic/fastquadx2_3_0.c\
+./Sensors/Encoder/Generic/fastquadx2_3_1.c\
+./Sensors/Encoder/Generic/fastquadx2_3_2.c\
+./Sensors/Encoder/Generic/fastquadx2_3_4.c\
+./Sensors/Encoder/Generic/fastquadx2_3_5.c\
+./Sensors/Encoder/Generic/fastquadx2_3_6.c\
+./Sensors/Encoder/Generic/fastquadx2_3_7.c\
+./Sensors/Encoder/Generic/fastquadx2_4_0.c\
+./Sensors/Encoder/Generic/fastquadx2_4_1.c\
+./Sensors/Encoder/Generic/fastquadx2_4_2.c\
+./Sensors/Encoder/Generic/fastquadx2_4_3.c\
+./Sensors/Encoder/Generic/fastquadx2_4_5.c\
+./Sensors/Encoder/Generic/fastquadx2_4_6.c\
+./Sensors/Encoder/Generic/fastquadx2_4_7.c\
+./Sensors/Encoder/Generic/fastquadx2_5_0.c\
+./Sensors/Encoder/Generic/fastquadx2_5_1.c\
+./Sensors/Encoder/Generic/fastquadx2_5_2.c\
+./Sensors/Encoder/Generic/fastquadx2_5_3.c\
+./Sensors/Encoder/Generic/fastquadx2_5_4.c\
+./Sensors/Encoder/Generic/fastquadx2_5_6.c\
+./Sensors/Encoder/Generic/fastquadx2_5_7.c\
+./Sensors/Encoder/Generic/fastquadx2_6_0.c\
+./Sensors/Encoder/Generic/fastquadx2_6_1.c\
+./Sensors/Encoder/Generic/fastquadx2_6_2.c\
+./Sensors/Encoder/Generic/fastquadx2_6_3.c\
+./Sensors/Encoder/Generic/fastquadx2_6_4.c\
+./Sensors/Encoder/Generic/fastquadx2_6_5.c\
+./Sensors/Encoder/Generic/fastquadx2_6_7.c\
+./Sensors/Encoder/Generic/fastquadx2_7_0.c\
+./Sensors/Encoder/Generic/fastquadx2_7_1.c\
+./Sensors/Encoder/Generic/fastquadx2_7_2.c\
+./Sensors/Encoder/Generic/fastquadx2_7_3.c\
+./Sensors/Encoder/Generic/fastquadx2_7_4.c\
+./Sensors/Encoder/Generic/fastquadx2_7_5.c\
+./Sensors/Encoder/Generic/fastquadx2_7_6.c\
+./Sensors/Encoder/Generic/quadrature.c\
+./Sensors/Encoder/Generic/quadraturex2.c\
+./Sensors/Encoder/_encoder_common.c\
+./Sensors/Encoder/_encoder_dump.c\
+./Sensors/GPS/NMEA/gpsNMEA.c\
+./Sensors/GPS/_gps_common.c\
+./Sensors/GPS/_gps_dump.c\
+./Sensors/Gyro/InvenSense/IDG300.c\
+./Sensors/Gyro/InvenSense/IDG500.c\
+./Sensors/Gyro/InvenSense/ITG3200.c\
+./Sensors/Gyro/ST/LPR530AL.c\
+./Sensors/Gyro/ST/LPRY530AL.c\
+./Sensors/Gyro/ST/LY530ALH.c\
+./Sensors/Gyro/_gyro_common.c\
+./Sensors/Humidity/Phidget/Humidity.c\
+./Sensors/Humidity/_humidity_common.c\
+./Sensors/IMU/Sparkfun/razor.c\
+./Sensors/IMU/_imu_common.c\
+./Sensors/Pressure/Bosch/BMP085.c\
+./Sensors/Pressure/Motorola/MPX5100a.c\
+./Sensors/Pressure/_pressureAlt.c\
+./Sensors/Pressure/_pressure_common.c\
+./Sensors/Pressure/_pressure_depth.c\
+./Sensors/Temperature/Devantech/TPA81.c\
+./Sensors/Temperature/Phidget/Temperature.c\
+./Sensors/Temperature/_temperature_common.c\
+./Sensors/Voltage/Phidget/30V.c\
+./Sensors/Voltage/_voltage_common.c\
+./Sensors/_sensor_common.c\
+./Sensors/phidgetsCommon.c\
+./Servos/Devantech/SD21.c\
+./Servos/Dynamixel/AX12.c\
+./Servos/Dynamixel/AX12dump.c\
+./Servos/Dynamixel/AX12dumpAll.c\
+./Servos/Dynamixel/AX12info.c\
+./Servos/serialServo.c\
+./Stepper/Generic/Bipolar.c\
+./Stepper/Generic/L297.c\
+./Stepper/Pololu/A4983.c\
+./Stepper/_stepper_common.c\
+./Storage/FileSystem/FATImpl.c\
+./Storage/FileSystem/FATdelfile.c\
+./Storage/FileSystem/FATfile.c\
+./Storage/FileSystem/FATlist.c\
+./Storage/FileSystem/FATmkdir.c\
+./Storage/i2cEEPROM.c\
+./Storage/sdCard.c\
+./Storage/spiEEPROM.c\
+./_i2c_common.c\
+./_spi_common.c\
+./_uart_common.c\
+./a2d.c\
+./a2dReadMv.c\
+./actuators.c\
+./buffer.c\
+./buffer2.c\
+./color1.c\
+./color2.c\
+./color3.c\
+./color_dump.c\
+./core.c\
+./core_interp.c\
+./core_interpU.c\
+./core_isqrt.c\
+./fraction32.c\
+./i2cBus.c\
+./i2cHwBus.c\
+./i2cSwBus.c\
+./i2c_slave.c\
+./iopin.c\
+./iopin_pulseIn.c\
+./iopin_pulseOut.c\
+./led.c\
+./motorPWM.c\
+./pid.c\
+./pinChange.c\
+./pwm.c\
+./rprintf.c\
+./rprintfHexDump.c\
+./rprintfStrLen.c\
+./rprintfc.c\
+./rprintff.c\
+./rprintfh.c\
+./rprintfn.c\
+./rprintfs.c\
+./scheduler.c\
+./segled.c\
+./segledMarquee.c\
+./servoMux.c\
+./servoPWM.c\
+./servos.c\
+./servosCenter.c\
+./servosConfig.c\
+./servosConnect.c\
+./servosSpeed.c\
+./spi.c\
+./spiUart.c\
+./spisw.c\
+./timer.c\
+./timerCapture.c\
+./timerCompare.c\
+./timerOverflow.c\
+./timerPWM.c\
+./uart.c\
+./uartsw.c
+
+OBJS = \
+$(OUT)/Audio/SOMO14D.o\
+$(OUT)/Audio/Text2Speech/phoneme2sound.o\
+$(OUT)/Audio/Text2Speech/phonemeWriter.o\
+$(OUT)/Audio/Text2Speech/sound2noise.o\
+$(OUT)/Audio/Text2Speech/speech2phoneme.o\
+$(OUT)/Audio/Text2Speech/speechWriter.o\
+$(OUT)/Audio/Text2Speech/vocab_en.o\
+$(OUT)/Audio/tone.o\
+$(OUT)/Audio/toneRTTTL.o\
+$(OUT)/BufferQueue.o\
+$(OUT)/Cameras/AVRcam/avrcam.o\
+$(OUT)/Cameras/Surveyor/blackfin.o\
+$(OUT)/Cameras/Surveyor/blackfin_vb.o\
+$(OUT)/Cameras/Surveyor/blackfin_vc.o\
+$(OUT)/Cameras/Surveyor/blackfin_vf.o\
+$(OUT)/Cameras/Surveyor/blackfin_vm.o\
+$(OUT)/Cameras/Surveyor/blackfin_vp.o\
+$(OUT)/Cameras/_camera_common.o\
+$(OUT)/Controller/Sony/ps2.o\
+$(OUT)/Displays/Devantech/LCD03.o\
+$(OUT)/Displays/Generic/HD44780.o\
+$(OUT)/Displays/MatrixOrbital/MatrixOrbital.o\
+$(OUT)/Displays/Sparkfun/serLCD.o\
+$(OUT)/Displays/Terminal/VT100.o\
+$(OUT)/Displays/_display_common.o\
+$(OUT)/Gait/GaitDesigner.o\
+$(OUT)/Gait/GaitRunner.o\
+$(OUT)/Maths/Matrix3D.o\
+$(OUT)/Maths/Vector2D.o\
+$(OUT)/Maths/Vector3D.o\
+$(OUT)/Motors/DimensionEngineering/Sabertooth.o\
+$(OUT)/Motors/L293D.o\
+$(OUT)/Motors/Pololu/DualSerial.o\
+$(OUT)/Motors/Sanyo/LB1836M.o\
+$(OUT)/Motors/Solarbotics/L298.o\
+$(OUT)/Motors/Toshiba/TB6612FNG_2pin.o\
+$(OUT)/Motors/Toshiba/TB6612FNG_3pin.o\
+$(OUT)/Sensors/Acceleration/AnalogDevices/ADXL335.o\
+$(OUT)/Sensors/Acceleration/AnalogDevices/ADXL345.o\
+$(OUT)/Sensors/Acceleration/DimensionEngineering/ACCM3D2.o\
+$(OUT)/Sensors/Acceleration/Freescale/MMA7260QT.o\
+$(OUT)/Sensors/Acceleration/_acceleration_common.o\
+$(OUT)/Sensors/Acceleration/_acceleration_dump.o\
+$(OUT)/Sensors/Compass/Devantech/CMPS03.o\
+$(OUT)/Sensors/Compass/Devantech/CMPS03_i2c.o\
+$(OUT)/Sensors/Compass/Devantech/CMPS09_i2c.o\
+$(OUT)/Sensors/Compass/Honeywell/HMC5843.o\
+$(OUT)/Sensors/Compass/Honeywell/HMC5883L.o\
+$(OUT)/Sensors/Compass/Honeywell/HMC6343.o\
+$(OUT)/Sensors/Compass/Honeywell/HMC6352.o\
+$(OUT)/Sensors/Compass/_compass_common.o\
+$(OUT)/Sensors/Current/Phidget/AC20A.o\
+$(OUT)/Sensors/Current/Phidget/AC50A.o\
+$(OUT)/Sensors/Current/Phidget/DC20A.o\
+$(OUT)/Sensors/Current/Phidget/DC50A.o\
+$(OUT)/Sensors/Current/_current_common.o\
+$(OUT)/Sensors/Distance/Devantech/SRF02_Sonar.o\
+$(OUT)/Sensors/Distance/Devantech/SRF04_Sonar.o\
+$(OUT)/Sensors/Distance/Devantech/SRF05_Sonar.o\
+$(OUT)/Sensors/Distance/Devantech/SRF08_Sonar.o\
+$(OUT)/Sensors/Distance/Maxbotix/EZ1.o\
+$(OUT)/Sensors/Distance/Maxbotix/MB7077.o\
+$(OUT)/Sensors/Distance/Ping/PingSonar.o\
+$(OUT)/Sensors/Distance/Sharp/GP2D12.o\
+$(OUT)/Sensors/Distance/Sharp/GP2D120.o\
+$(OUT)/Sensors/Distance/Sharp/GP2D15.o\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A02YK.o\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A02YK0F.o\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A21YK.o\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A700K0F.o\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A710K0F.o\
+$(OUT)/Sensors/Distance/Sharp/GP2Y3A002K0F.o\
+$(OUT)/Sensors/Distance/Sharp/GP2Y3A003K0F.o\
+$(OUT)/Sensors/Distance/_distance_common.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad6.o\
+$(OUT)/Sensors/Encoder/Generic/fastquad7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_6.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_6.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_6.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_6.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_6.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_6.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_7.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_0.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_1.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_2.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_3.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_4.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_5.o\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_6.o\
+$(OUT)/Sensors/Encoder/Generic/quadrature.o\
+$(OUT)/Sensors/Encoder/Generic/quadraturex2.o\
+$(OUT)/Sensors/Encoder/_encoder_common.o\
+$(OUT)/Sensors/Encoder/_encoder_dump.o\
+$(OUT)/Sensors/GPS/NMEA/gpsNMEA.o\
+$(OUT)/Sensors/GPS/_gps_common.o\
+$(OUT)/Sensors/GPS/_gps_dump.o\
+$(OUT)/Sensors/Gyro/InvenSense/IDG300.o\
+$(OUT)/Sensors/Gyro/InvenSense/IDG500.o\
+$(OUT)/Sensors/Gyro/InvenSense/ITG3200.o\
+$(OUT)/Sensors/Gyro/ST/LPR530AL.o\
+$(OUT)/Sensors/Gyro/ST/LPRY530AL.o\
+$(OUT)/Sensors/Gyro/ST/LY530ALH.o\
+$(OUT)/Sensors/Gyro/_gyro_common.o\
+$(OUT)/Sensors/Humidity/Phidget/Humidity.o\
+$(OUT)/Sensors/Humidity/_humidity_common.o\
+$(OUT)/Sensors/IMU/Sparkfun/razor.o\
+$(OUT)/Sensors/IMU/_imu_common.o\
+$(OUT)/Sensors/Pressure/Bosch/BMP085.o\
+$(OUT)/Sensors/Pressure/Motorola/MPX5100a.o\
+$(OUT)/Sensors/Pressure/_pressureAlt.o\
+$(OUT)/Sensors/Pressure/_pressure_common.o\
+$(OUT)/Sensors/Pressure/_pressure_depth.o\
+$(OUT)/Sensors/Temperature/Devantech/TPA81.o\
+$(OUT)/Sensors/Temperature/Phidget/Temperature.o\
+$(OUT)/Sensors/Temperature/_temperature_common.o\
+$(OUT)/Sensors/Voltage/Phidget/30V.o\
+$(OUT)/Sensors/Voltage/_voltage_common.o\
+$(OUT)/Sensors/_sensor_common.o\
+$(OUT)/Sensors/phidgetsCommon.o\
+$(OUT)/Servos/Devantech/SD21.o\
+$(OUT)/Servos/Dynamixel/AX12.o\
+$(OUT)/Servos/Dynamixel/AX12dump.o\
+$(OUT)/Servos/Dynamixel/AX12dumpAll.o\
+$(OUT)/Servos/Dynamixel/AX12info.o\
+$(OUT)/Servos/serialServo.o\
+$(OUT)/Stepper/Generic/Bipolar.o\
+$(OUT)/Stepper/Generic/L297.o\
+$(OUT)/Stepper/Pololu/A4983.o\
+$(OUT)/Stepper/_stepper_common.o\
+$(OUT)/Storage/FileSystem/FATImpl.o\
+$(OUT)/Storage/FileSystem/FATdelfile.o\
+$(OUT)/Storage/FileSystem/FATfile.o\
+$(OUT)/Storage/FileSystem/FATlist.o\
+$(OUT)/Storage/FileSystem/FATmkdir.o\
+$(OUT)/Storage/i2cEEPROM.o\
+$(OUT)/Storage/sdCard.o\
+$(OUT)/Storage/spiEEPROM.o\
+$(OUT)/_i2c_common.o\
+$(OUT)/_spi_common.o\
+$(OUT)/_uart_common.o\
+$(OUT)/a2d.o\
+$(OUT)/a2dReadMv.o\
+$(OUT)/actuators.o\
+$(OUT)/buffer.o\
+$(OUT)/buffer2.o\
+$(OUT)/color1.o\
+$(OUT)/color2.o\
+$(OUT)/color3.o\
+$(OUT)/color_dump.o\
+$(OUT)/core.o\
+$(OUT)/core_interp.o\
+$(OUT)/core_interpU.o\
+$(OUT)/core_isqrt.o\
+$(OUT)/fraction32.o\
+$(OUT)/i2cBus.o\
+$(OUT)/i2cHwBus.o\
+$(OUT)/i2cSwBus.o\
+$(OUT)/i2c_slave.o\
+$(OUT)/iopin.o\
+$(OUT)/iopin_pulseIn.o\
+$(OUT)/iopin_pulseOut.o\
+$(OUT)/led.o\
+$(OUT)/motorPWM.o\
+$(OUT)/pid.o\
+$(OUT)/pinChange.o\
+$(OUT)/pwm.o\
+$(OUT)/rprintf.o\
+$(OUT)/rprintfHexDump.o\
+$(OUT)/rprintfStrLen.o\
+$(OUT)/rprintfc.o\
+$(OUT)/rprintff.o\
+$(OUT)/rprintfh.o\
+$(OUT)/rprintfn.o\
+$(OUT)/rprintfs.o\
+$(OUT)/scheduler.o\
+$(OUT)/segled.o\
+$(OUT)/segledMarquee.o\
+$(OUT)/servoMux.o\
+$(OUT)/servoPWM.o\
+$(OUT)/servos.o\
+$(OUT)/servosCenter.o\
+$(OUT)/servosConfig.o\
+$(OUT)/servosConnect.o\
+$(OUT)/servosSpeed.o\
+$(OUT)/spi.o\
+$(OUT)/spiUart.o\
+$(OUT)/spisw.o\
+$(OUT)/timer.o\
+$(OUT)/timerCapture.o\
+$(OUT)/timerCompare.o\
+$(OUT)/timerOverflow.o\
+$(OUT)/timerPWM.o\
+$(OUT)/uart.o\
+$(OUT)/uartsw.o
+
+C_DEPS=\
+$(OUT)/Audio/SOMO14D.d\
+$(OUT)/Audio/Text2Speech/phoneme2sound.d\
+$(OUT)/Audio/Text2Speech/phonemeWriter.d\
+$(OUT)/Audio/Text2Speech/sound2noise.d\
+$(OUT)/Audio/Text2Speech/speech2phoneme.d\
+$(OUT)/Audio/Text2Speech/speechWriter.d\
+$(OUT)/Audio/Text2Speech/vocab_en.d\
+$(OUT)/Audio/tone.d\
+$(OUT)/Audio/toneRTTTL.d\
+$(OUT)/BufferQueue.d\
+$(OUT)/Cameras/AVRcam/avrcam.d\
+$(OUT)/Cameras/Surveyor/blackfin.d\
+$(OUT)/Cameras/Surveyor/blackfin_vb.d\
+$(OUT)/Cameras/Surveyor/blackfin_vc.d\
+$(OUT)/Cameras/Surveyor/blackfin_vf.d\
+$(OUT)/Cameras/Surveyor/blackfin_vm.d\
+$(OUT)/Cameras/Surveyor/blackfin_vp.d\
+$(OUT)/Cameras/_camera_common.d\
+$(OUT)/Controller/Sony/ps2.d\
+$(OUT)/Displays/Devantech/LCD03.d\
+$(OUT)/Displays/Generic/HD44780.d\
+$(OUT)/Displays/MatrixOrbital/MatrixOrbital.d\
+$(OUT)/Displays/Sparkfun/serLCD.d\
+$(OUT)/Displays/Terminal/VT100.d\
+$(OUT)/Displays/_display_common.d\
+$(OUT)/Gait/GaitDesigner.d\
+$(OUT)/Gait/GaitRunner.d\
+$(OUT)/Maths/Matrix3D.d\
+$(OUT)/Maths/Vector2D.d\
+$(OUT)/Maths/Vector3D.d\
+$(OUT)/Motors/DimensionEngineering/Sabertooth.d\
+$(OUT)/Motors/L293D.d\
+$(OUT)/Motors/Pololu/DualSerial.d\
+$(OUT)/Motors/Sanyo/LB1836M.d\
+$(OUT)/Motors/Solarbotics/L298.d\
+$(OUT)/Motors/Toshiba/TB6612FNG_2pin.d\
+$(OUT)/Motors/Toshiba/TB6612FNG_3pin.d\
+$(OUT)/Sensors/Acceleration/AnalogDevices/ADXL335.d\
+$(OUT)/Sensors/Acceleration/AnalogDevices/ADXL345.d\
+$(OUT)/Sensors/Acceleration/DimensionEngineering/ACCM3D2.d\
+$(OUT)/Sensors/Acceleration/Freescale/MMA7260QT.d\
+$(OUT)/Sensors/Acceleration/_acceleration_common.d\
+$(OUT)/Sensors/Acceleration/_acceleration_dump.d\
+$(OUT)/Sensors/Compass/Devantech/CMPS03.d\
+$(OUT)/Sensors/Compass/Devantech/CMPS03_i2c.d\
+$(OUT)/Sensors/Compass/Devantech/CMPS09_i2c.d\
+$(OUT)/Sensors/Compass/Honeywell/HMC5843.d\
+$(OUT)/Sensors/Compass/Honeywell/HMC5883L.d\
+$(OUT)/Sensors/Compass/Honeywell/HMC6343.d\
+$(OUT)/Sensors/Compass/Honeywell/HMC6352.d\
+$(OUT)/Sensors/Compass/_compass_common.d\
+$(OUT)/Sensors/Current/Phidget/AC20A.d\
+$(OUT)/Sensors/Current/Phidget/AC50A.d\
+$(OUT)/Sensors/Current/Phidget/DC20A.d\
+$(OUT)/Sensors/Current/Phidget/DC50A.d\
+$(OUT)/Sensors/Current/_current_common.d\
+$(OUT)/Sensors/Distance/Devantech/SRF02_Sonar.d\
+$(OUT)/Sensors/Distance/Devantech/SRF04_Sonar.d\
+$(OUT)/Sensors/Distance/Devantech/SRF05_Sonar.d\
+$(OUT)/Sensors/Distance/Devantech/SRF08_Sonar.d\
+$(OUT)/Sensors/Distance/Maxbotix/EZ1.d\
+$(OUT)/Sensors/Distance/Maxbotix/MB7077.d\
+$(OUT)/Sensors/Distance/Ping/PingSonar.d\
+$(OUT)/Sensors/Distance/Sharp/GP2D12.d\
+$(OUT)/Sensors/Distance/Sharp/GP2D120.d\
+$(OUT)/Sensors/Distance/Sharp/GP2D15.d\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A02YK.d\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A02YK0F.d\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A21YK.d\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A700K0F.d\
+$(OUT)/Sensors/Distance/Sharp/GP2Y0A710K0F.d\
+$(OUT)/Sensors/Distance/Sharp/GP2Y3A002K0F.d\
+$(OUT)/Sensors/Distance/Sharp/GP2Y3A003K0F.d\
+$(OUT)/Sensors/Distance/_distance_common.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad6.d\
+$(OUT)/Sensors/Encoder/Generic/fastquad7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_6.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_0_7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_6.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_1_7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_6.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_2_7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_6.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_3_7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_6.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_4_7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_6.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_5_7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_6_7.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_0.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_1.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_2.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_3.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_4.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_5.d\
+$(OUT)/Sensors/Encoder/Generic/fastquadx2_7_6.d\
+$(OUT)/Sensors/Encoder/Generic/quadrature.d\
+$(OUT)/Sensors/Encoder/Generic/quadraturex2.d\
+$(OUT)/Sensors/Encoder/_encoder_common.d\
+$(OUT)/Sensors/Encoder/_encoder_dump.d\
+$(OUT)/Sensors/GPS/NMEA/gpsNMEA.d\
+$(OUT)/Sensors/GPS/_gps_common.d\
+$(OUT)/Sensors/GPS/_gps_dump.d\
+$(OUT)/Sensors/Gyro/InvenSense/IDG300.d\
+$(OUT)/Sensors/Gyro/InvenSense/IDG500.d\
+$(OUT)/Sensors/Gyro/InvenSense/ITG3200.d\
+$(OUT)/Sensors/Gyro/ST/LPR530AL.d\
+$(OUT)/Sensors/Gyro/ST/LPRY530AL.d\
+$(OUT)/Sensors/Gyro/ST/LY530ALH.d\
+$(OUT)/Sensors/Gyro/_gyro_common.d\
+$(OUT)/Sensors/Humidity/Phidget/Humidity.d\
+$(OUT)/Sensors/Humidity/_humidity_common.d\
+$(OUT)/Sensors/IMU/Sparkfun/razor.d\
+$(OUT)/Sensors/IMU/_imu_common.d\
+$(OUT)/Sensors/Pressure/Bosch/BMP085.d\
+$(OUT)/Sensors/Pressure/Motorola/MPX5100a.d\
+$(OUT)/Sensors/Pressure/_pressureAlt.d\
+$(OUT)/Sensors/Pressure/_pressure_common.d\
+$(OUT)/Sensors/Pressure/_pressure_depth.d\
+$(OUT)/Sensors/Temperature/Devantech/TPA81.d\
+$(OUT)/Sensors/Temperature/Phidget/Temperature.d\
+$(OUT)/Sensors/Temperature/_temperature_common.d\
+$(OUT)/Sensors/Voltage/Phidget/30V.d\
+$(OUT)/Sensors/Voltage/_voltage_common.d\
+$(OUT)/Sensors/_sensor_common.d\
+$(OUT)/Sensors/phidgetsCommon.d\
+$(OUT)/Servos/Devantech/SD21.d\
+$(OUT)/Servos/Dynamixel/AX12.d\
+$(OUT)/Servos/Dynamixel/AX12dump.d\
+$(OUT)/Servos/Dynamixel/AX12dumpAll.d\
+$(OUT)/Servos/Dynamixel/AX12info.d\
+$(OUT)/Servos/serialServo.d\
+$(OUT)/Stepper/Generic/Bipolar.d\
+$(OUT)/Stepper/Generic/L297.d\
+$(OUT)/Stepper/Pololu/A4983.d\
+$(OUT)/Stepper/_stepper_common.d\
+$(OUT)/Storage/FileSystem/FATImpl.d\
+$(OUT)/Storage/FileSystem/FATdelfile.d\
+$(OUT)/Storage/FileSystem/FATfile.d\
+$(OUT)/Storage/FileSystem/FATlist.d\
+$(OUT)/Storage/FileSystem/FATmkdir.d\
+$(OUT)/Storage/i2cEEPROM.d\
+$(OUT)/Storage/sdCard.d\
+$(OUT)/Storage/spiEEPROM.d\
+$(OUT)/_i2c_common.d\
+$(OUT)/_spi_common.d\
+$(OUT)/_uart_common.d\
+$(OUT)/a2d.d\
+$(OUT)/a2dReadMv.d\
+$(OUT)/actuators.d\
+$(OUT)/buffer.d\
+$(OUT)/buffer2.d\
+$(OUT)/color1.d\
+$(OUT)/color2.d\
+$(OUT)/color3.d\
+$(OUT)/color_dump.d\
+$(OUT)/core.d\
+$(OUT)/core_interp.d\
+$(OUT)/core_interpU.d\
+$(OUT)/core_isqrt.d\
+$(OUT)/fraction32.d\
+$(OUT)/i2cBus.d\
+$(OUT)/i2cHwBus.d\
+$(OUT)/i2cSwBus.d\
+$(OUT)/i2c_slave.d\
+$(OUT)/iopin.d\
+$(OUT)/iopin_pulseIn.d\
+$(OUT)/iopin_pulseOut.d\
+$(OUT)/led.d\
+$(OUT)/motorPWM.d\
+$(OUT)/pid.d\
+$(OUT)/pinChange.d\
+$(OUT)/pwm.d\
+$(OUT)/rprintf.d\
+$(OUT)/rprintfHexDump.d\
+$(OUT)/rprintfStrLen.d\
+$(OUT)/rprintfc.d\
+$(OUT)/rprintff.d\
+$(OUT)/rprintfh.d\
+$(OUT)/rprintfn.d\
+$(OUT)/rprintfs.d\
+$(OUT)/scheduler.d\
+$(OUT)/segled.d\
+$(OUT)/segledMarquee.d\
+$(OUT)/servoMux.d\
+$(OUT)/servoPWM.d\
+$(OUT)/servos.d\
+$(OUT)/servosCenter.d\
+$(OUT)/servosConfig.d\
+$(OUT)/servosConnect.d\
+$(OUT)/servosSpeed.d\
+$(OUT)/spi.d\
+$(OUT)/spiUart.d\
+$(OUT)/spisw.d\
+$(OUT)/timer.d\
+$(OUT)/timerCapture.d\
+$(OUT)/timerCompare.d\
+$(OUT)/timerOverflow.d\
+$(OUT)/timerPWM.d\
+$(OUT)/uart.d\
+$(OUT)/uartsw.d
+
+CFLAGS = -DBUILDING_LIBRARY -Wall -Os -gdwarf-2 -std=gnu99 -fpack-struct -fshort-enums  -funsigned-char -funsigned-bitfields
+CPPFLAGS = -Wall -gdwarf-2            -fpack-struct -fshort-enums  -funsigned-char -funsigned-bitfields
+.PHONY: default
+
+default:
+	@echo 'Dont call me directly !'
+
+# Each subdirectory requires its own build rules:-
+$(OUT)/Storage/FileSystem/%.o: Storage/FileSystem/%.c makeone
+	$(shell   mkdir -p $(OUT)/Storage/FileSystem/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Storage/FileSystem/%.o: Storage/FileSystem/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Storage/FileSystem/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Storage/%.o: Storage/%.c makeone
+	$(shell   mkdir -p $(OUT)/Storage/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Storage/%.o: Storage/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Storage/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Stepper/Pololu/%.o: Stepper/Pololu/%.c makeone
+	$(shell   mkdir -p $(OUT)/Stepper/Pololu/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Stepper/Pololu/%.o: Stepper/Pololu/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Stepper/Pololu/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Stepper/Generic/%.o: Stepper/Generic/%.c makeone
+	$(shell   mkdir -p $(OUT)/Stepper/Generic/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Stepper/Generic/%.o: Stepper/Generic/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Stepper/Generic/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Stepper/%.o: Stepper/%.c makeone
+	$(shell   mkdir -p $(OUT)/Stepper/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Stepper/%.o: Stepper/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Stepper/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/Dynamixel/%.o: Servos/Dynamixel/%.c makeone
+	$(shell   mkdir -p $(OUT)/Servos/Dynamixel/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/Dynamixel/%.o: Servos/Dynamixel/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Servos/Dynamixel/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/Devantech/%.o: Servos/Devantech/%.c makeone
+	$(shell   mkdir -p $(OUT)/Servos/Devantech/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/Devantech/%.o: Servos/Devantech/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Servos/Devantech/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/%.o: Servos/%.c makeone
+	$(shell   mkdir -p $(OUT)/Servos/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Servos/%.o: Servos/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Servos/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Voltage/Phidget/%.o: Sensors/Voltage/Phidget/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Voltage/Phidget/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Voltage/Phidget/%.o: Sensors/Voltage/Phidget/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Voltage/Phidget/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Voltage/%.o: Sensors/Voltage/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Voltage/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Voltage/%.o: Sensors/Voltage/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Voltage/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Temperature/Phidget/%.o: Sensors/Temperature/Phidget/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Temperature/Phidget/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Temperature/Phidget/%.o: Sensors/Temperature/Phidget/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Temperature/Phidget/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Temperature/Devantech/%.o: Sensors/Temperature/Devantech/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Temperature/Devantech/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Temperature/Devantech/%.o: Sensors/Temperature/Devantech/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Temperature/Devantech/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Temperature/%.o: Sensors/Temperature/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Temperature/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Temperature/%.o: Sensors/Temperature/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Temperature/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Pressure/Motorola/%.o: Sensors/Pressure/Motorola/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Pressure/Motorola/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Pressure/Motorola/%.o: Sensors/Pressure/Motorola/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Pressure/Motorola/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Pressure/Bosch/%.o: Sensors/Pressure/Bosch/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Pressure/Bosch/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Pressure/Bosch/%.o: Sensors/Pressure/Bosch/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Pressure/Bosch/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Pressure/%.o: Sensors/Pressure/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Pressure/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Pressure/%.o: Sensors/Pressure/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Pressure/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/IMU/Sparkfun/%.o: Sensors/IMU/Sparkfun/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/IMU/Sparkfun/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/IMU/Sparkfun/%.o: Sensors/IMU/Sparkfun/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/IMU/Sparkfun/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/IMU/%.o: Sensors/IMU/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/IMU/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/IMU/%.o: Sensors/IMU/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/IMU/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Humidity/Phidget/%.o: Sensors/Humidity/Phidget/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Humidity/Phidget/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Humidity/Phidget/%.o: Sensors/Humidity/Phidget/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Humidity/Phidget/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Humidity/%.o: Sensors/Humidity/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Humidity/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Humidity/%.o: Sensors/Humidity/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Humidity/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Gyro/ST/%.o: Sensors/Gyro/ST/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Gyro/ST/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Gyro/ST/%.o: Sensors/Gyro/ST/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Gyro/ST/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Gyro/InvenSense/%.o: Sensors/Gyro/InvenSense/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Gyro/InvenSense/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Gyro/InvenSense/%.o: Sensors/Gyro/InvenSense/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Gyro/InvenSense/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Gyro/%.o: Sensors/Gyro/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Gyro/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Gyro/%.o: Sensors/Gyro/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Gyro/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/GPS/NMEA/%.o: Sensors/GPS/NMEA/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/GPS/NMEA/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/GPS/NMEA/%.o: Sensors/GPS/NMEA/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/GPS/NMEA/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/GPS/%.o: Sensors/GPS/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/GPS/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/GPS/%.o: Sensors/GPS/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/GPS/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Encoder/Generic/%.o: Sensors/Encoder/Generic/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Encoder/Generic/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Encoder/Generic/%.o: Sensors/Encoder/Generic/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Encoder/Generic/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Encoder/%.o: Sensors/Encoder/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Encoder/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Encoder/%.o: Sensors/Encoder/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Encoder/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Sharp/%.o: Sensors/Distance/Sharp/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Sharp/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Sharp/%.o: Sensors/Distance/Sharp/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Sharp/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Ping/%.o: Sensors/Distance/Ping/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Ping/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Ping/%.o: Sensors/Distance/Ping/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Ping/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Maxbotix/%.o: Sensors/Distance/Maxbotix/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Maxbotix/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Maxbotix/%.o: Sensors/Distance/Maxbotix/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Maxbotix/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Devantech/%.o: Sensors/Distance/Devantech/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Devantech/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/Devantech/%.o: Sensors/Distance/Devantech/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/Devantech/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/%.o: Sensors/Distance/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Distance/%.o: Sensors/Distance/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Distance/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Current/Phidget/%.o: Sensors/Current/Phidget/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Current/Phidget/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Current/Phidget/%.o: Sensors/Current/Phidget/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Current/Phidget/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Current/%.o: Sensors/Current/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Current/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Current/%.o: Sensors/Current/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Current/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Compass/Honeywell/%.o: Sensors/Compass/Honeywell/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Compass/Honeywell/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Compass/Honeywell/%.o: Sensors/Compass/Honeywell/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Compass/Honeywell/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Compass/Devantech/%.o: Sensors/Compass/Devantech/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Compass/Devantech/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Compass/Devantech/%.o: Sensors/Compass/Devantech/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Compass/Devantech/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Compass/%.o: Sensors/Compass/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Compass/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Compass/%.o: Sensors/Compass/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Compass/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/Freescale/%.o: Sensors/Acceleration/Freescale/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/Freescale/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/Freescale/%.o: Sensors/Acceleration/Freescale/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/Freescale/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/DimensionEngineering/%.o: Sensors/Acceleration/DimensionEngineering/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/DimensionEngineering/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/DimensionEngineering/%.o: Sensors/Acceleration/DimensionEngineering/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/DimensionEngineering/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/AnalogDevices/%.o: Sensors/Acceleration/AnalogDevices/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/AnalogDevices/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/AnalogDevices/%.o: Sensors/Acceleration/AnalogDevices/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/AnalogDevices/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/%.o: Sensors/Acceleration/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/Acceleration/%.o: Sensors/Acceleration/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/Acceleration/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/%.o: Sensors/%.c makeone
+	$(shell   mkdir -p $(OUT)/Sensors/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Sensors/%.o: Sensors/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Sensors/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Toshiba/%.o: Motors/Toshiba/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Toshiba/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Toshiba/%.o: Motors/Toshiba/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Toshiba/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Solarbotics/%.o: Motors/Solarbotics/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Solarbotics/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Solarbotics/%.o: Motors/Solarbotics/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Solarbotics/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Sanyo/%.o: Motors/Sanyo/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Sanyo/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Sanyo/%.o: Motors/Sanyo/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Sanyo/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Pololu/%.o: Motors/Pololu/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/Pololu/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/Pololu/%.o: Motors/Pololu/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/Pololu/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/DimensionEngineering/%.o: Motors/DimensionEngineering/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/DimensionEngineering/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/DimensionEngineering/%.o: Motors/DimensionEngineering/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/DimensionEngineering/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/%.o: Motors/%.c makeone
+	$(shell   mkdir -p $(OUT)/Motors/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Motors/%.o: Motors/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Motors/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Maths/%.o: Maths/%.c makeone
+	$(shell   mkdir -p $(OUT)/Maths/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Maths/%.o: Maths/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Maths/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Gait/%.o: Gait/%.c makeone
+	$(shell   mkdir -p $(OUT)/Gait/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Gait/%.o: Gait/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Gait/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Terminal/%.o: Displays/Terminal/%.c makeone
+	$(shell   mkdir -p $(OUT)/Displays/Terminal/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Terminal/%.o: Displays/Terminal/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Displays/Terminal/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Sparkfun/%.o: Displays/Sparkfun/%.c makeone
+	$(shell   mkdir -p $(OUT)/Displays/Sparkfun/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Sparkfun/%.o: Displays/Sparkfun/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Displays/Sparkfun/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/MatrixOrbital/%.o: Displays/MatrixOrbital/%.c makeone
+	$(shell   mkdir -p $(OUT)/Displays/MatrixOrbital/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/MatrixOrbital/%.o: Displays/MatrixOrbital/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Displays/MatrixOrbital/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Generic/%.o: Displays/Generic/%.c makeone
+	$(shell   mkdir -p $(OUT)/Displays/Generic/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Generic/%.o: Displays/Generic/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Displays/Generic/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Devantech/%.o: Displays/Devantech/%.c makeone
+	$(shell   mkdir -p $(OUT)/Displays/Devantech/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/Devantech/%.o: Displays/Devantech/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Displays/Devantech/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/%.o: Displays/%.c makeone
+	$(shell   mkdir -p $(OUT)/Displays/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Displays/%.o: Displays/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Displays/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Controller/Sony/%.o: Controller/Sony/%.c makeone
+	$(shell   mkdir -p $(OUT)/Controller/Sony/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Controller/Sony/%.o: Controller/Sony/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Controller/Sony/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/Surveyor/%.o: Cameras/Surveyor/%.c makeone
+	$(shell   mkdir -p $(OUT)/Cameras/Surveyor/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/Surveyor/%.o: Cameras/Surveyor/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Cameras/Surveyor/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/AVRcam/%.o: Cameras/AVRcam/%.c makeone
+	$(shell   mkdir -p $(OUT)/Cameras/AVRcam/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/AVRcam/%.o: Cameras/AVRcam/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Cameras/AVRcam/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/%.o: Cameras/%.c makeone
+	$(shell   mkdir -p $(OUT)/Cameras/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Cameras/%.o: Cameras/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Cameras/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Audio/Text2Speech/%.o: Audio/Text2Speech/%.c makeone
+	$(shell   mkdir -p $(OUT)/Audio/Text2Speech/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Audio/Text2Speech/%.o: Audio/Text2Speech/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Audio/Text2Speech/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Audio/%.o: Audio/%.c makeone
+	$(shell   mkdir -p $(OUT)/Audio/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/Audio/%.o: Audio/%.cpp makeone
+	$(shell   mkdir -p $(OUT)/Audio/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/%.o: %.c makeone
+	$(shell   mkdir -p $(OUT)/)
+	avr-gcc $(CFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+$(OUT)/%.o: %.cpp makeone
+	$(shell   mkdir -p $(OUT)/)
+	avr-g++ $(CPPFLAGS) -mmcu=$(MCU) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -c -o"$@" "$<" 
+
+
+libWebbot-ATMega328P.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega328P.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega644.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega644.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega32.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega32.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega168.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega168.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega1280.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega1280.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega128.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega128.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega1284P.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega1284P.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega128RFA1.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega128RFA1.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega2561.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega2561.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega2560.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega2560.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega640.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega640.lss
+	@echo 'Finished building target: $@'
+
+libWebbot-ATMega8.a: makeone $(OBJS)
+	@echo '-------------------------------------------------------'
+	@echo 'Building target: $@'
+	avr-ar -r "$@" $(OBJS)
+	avr-objdump -h -S "$@" > libWebbot-ATMega8.lss
+	@echo 'Finished building target: $@'
+
